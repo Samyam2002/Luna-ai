@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,15 +15,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//Home page
 Route::get('/', function () {
-    // return view('welcome');
-    return view('index');
+    return view('welcome');
+    // return view('index');
 });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+//show dashboard according the user type
+Route::get('/dashboard',[AdminController::class, 'index'])->name('dashboard');
+
+//???
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -32,9 +38,28 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 
+
+
+/*rest of the routes*/
+
+//pages routes
+Route::get('/shop', [PageController::class, 'shop']);
+Route::get('/contact', [PageController::class, 'contact']);
+Route::get('/product/{id}', [PageController::class, 'product']);
+
+//to sort the products on the basis of price
+Route::get('/sortMintoMax',[PageController::class, 'sortMintoMax']);
+Route::get('/sortMaxtoMin',[PageController::class, 'sortMaxtoMin']);
+
+//for filtering based on category
+Route::get('/cat/{id}',[PageController::class, 'searchCategory']);
+
+//searching
+Route::get('/search',[PageController::class, 'search']);
+
 //crud functions only for admin
 Route::middleware('auth','is_admin')->group(function(){
-    Route::get('/admin',[AdminController::class, 'index'])->name('admin.index');
+    // Route::get('/admin',[AdminController::class, 'index'])->name('admin.index');
 
     Route::get('/category', [AdminController::class, 'category']);
     Route::post('/add_category', [AdminController::class, 'addCategory']);
