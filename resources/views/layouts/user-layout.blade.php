@@ -126,12 +126,21 @@
 
 		<!-- Top Bar
 		============================================= -->
-		<div id="top-bar" class="py-3 text-center bg-color-light">
+		<div id="top-bar" class="text-center bg-color-light">
 			<div class="container clearfix">
 				<div class="d-md-flex justify-content-md-between align-items-md-center">
-					<h4 class="mb-2 mb-md-0 h6 fw-normal">Free Shipping on every order <span class="mx-2 text-black-50">&middot;</span> 30 Days Return</h4>
+					<h4 class="mb-2 mb-md-0 h6 fw-normal" id="hide">Free Shipping on every order</h4>
 
-					<h4 class="mb-0 h6 fw-normal">Need Help? Call us at <a class="color" href="tel:+00-11-22-7541"><u class="fw-medium">+00-11-22-7541</u></a> or <a class="color" href="mailto:noreply@canvas.com"><u class="fw-medium">email</u></a> us.</h4>
+					@if (Route::has('login'))
+						@auth
+						<x-app-layout></x-app-layout>
+						@else
+						<h4 class="mb-0 h6 fw-normal">
+						<a href="{{ route('login') }}" class="button button-border py-1 nott ls0 fw-normal button-dark border-width-1 border-color h-bg-color">Login</a>
+						<a href="{{ route('register') }}" class="button button-border py-1 nott ls0 fw-normal button-dark border-width-1 border-color h-bg-color">Register</a>
+						</h4>
+						@endauth
+					@endif
 				</div>
 			</div>
 		</div><!-- #top-bar end -->
@@ -185,17 +194,9 @@
 									<a class="menu-link" href="demo-furniture.html">
 										<div>Home</div>
 									</a>
-									<ul class="sub-menu-container">
-										<li class="menu-item">
-											<a class="menu-link" href="demo-furniture.html"><div>Home Page 1</div></a>
-										</li>
-										<li class="menu-item">
-											<a class="menu-link" href="demo-furniture-2.html"><div>Home Page 2</div></a>
-										</li>
-									</ul>
 								</li>
 								<li class="menu-item mega-menu mega-menu-full">
-									<a href="demo-furniture-products.html" class="menu-link"><div>Shop</div></a>
+									<a href="/shop" class="menu-link"><div>Shop</div></a>
 
 									<!-- Menu DropDown
 									============================================= -->
@@ -204,74 +205,32 @@
 											<div class="row">
 												<ul class="sub-menu-container mega-menu-column col-lg-auto">
 													<li class="menu-item">
-														<a class="menu-link" href="demo-furniture-products.html"><div>Sofa</div></a>
-
-														<!-- Menu Sub DropDown
-														============================================= -->
-														<ul class="sub-menu-container mega-menu-dropdown">
-															<li class="menu-item">
-																<a class="menu-link" href="demo-furniture-products.html"><div>Sofa Set</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="demo-furniture-products.html"><div>Single Seater</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="demo-furniture-products.html"><div>Recliner</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="demo-furniture-products.html"><div>Sofa Cum Bed</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="demo-furniture-products.html"><div>BeanBag</div></a>
-															</li>
-														</ul>
+														<a class="menu-link" href="/shop"><div>Lamps</div></a>
 													</li>
 												</ul>
 												<ul class="sub-menu-container mega-menu-column col-lg-auto">
 													<li class="menu-item">
-														<a class="menu-link" href="demo-furniture-products.html"><div>Chairs</div></a>
+														<a class="menu-link" href="/shop"><div>Vases</div></a>
 													</li>
 												</ul>
 												<ul class="sub-menu-container mega-menu-column col-lg-auto">
 													<li class="menu-item">
-														<a class="menu-link" href="demo-furniture-products.html"><div>Beds</div></a>
+														<a class="menu-link" href="/shop"><div>Chairs</div></a>
 													</li>
 												</ul>
 												<ul class="sub-menu-container mega-menu-column col-lg-auto">
 													<li class="menu-item">
-														<a class="menu-link" href="demo-furniture-products.html"><div>Wardrobe</div></a>
+														<a class="menu-link" href="/shop"><div>Tables</div></a>
 													</li>
 												</ul>
 												<ul class="sub-menu-container mega-menu-column col-lg-auto">
 													<li class="menu-item">
-														<a class="menu-link" href="demo-furniture-products.html"><div>Tables</div></a>
+														<a class="menu-link" href="/shop"><div>Sofas</div></a>
 													</li>
 												</ul>
 												<ul class="sub-menu-container mega-menu-column col-lg-auto">
 													<li class="menu-item">
-														<a class="menu-link" href="demo-furniture-products.html"><div>More</div></a>
-														<ul class="sub-menu-container mega-menu-dropdown">
-															<li class="menu-item">
-																<a class="menu-link" href="demo-furniture-products.html"><div>Kids Room</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="demo-furniture-products.html"><div>Mattress</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="demo-furniture-products.html"><div>Lighting</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="demo-furniture-products.html"><div>Pillows</div></a>
-															</li>
-															<li class="menu-item">
-																<a class="menu-link" href="demo-furniture-products.html"><div>FlowerPot</div></a>
-															</li>
-														</ul>
-													</li>
-												</ul>
-												<ul class="sub-menu-container mega-menu-column bg-color-light col-lg-auto">
-													<li class="menu-item">
-														<a class="menu-link" href="demo-furniture-single.html"><div><i class="icon-line-link"></i>Single Page</div></a>
+														<a class="menu-link" href="/shop"><div>Cupboards</div></a>
 													</li>
 												</ul>
 											</div>
@@ -359,7 +318,7 @@
 								<h4 class="ls0 nott">Trending</h4>
 
 								<ul class="list-unstyled iconlist ms-0">
-									<li><a href="demo-furniture-products.html">Shop</a></li>
+									<li><a href="/shop">Shop</a></li>
 									<li><a href="demo-forum-single.html">Single</a></li>
 									<li><a href="demo-furniture-about.html">Who are we</a></li>
 								</ul>
