@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
+
 <head>
 
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -102,7 +103,12 @@
 				<!-- Cart Saved Text
 				============================================= -->
 				<div class="py-2 px-3 mt-auto text-black-50 text-smaller bg-color-light">
-					<span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--themecolor)" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M54.46089,201.53911c-9.204-9.204-3.09935-28.52745-7.78412-39.85C41.82037,149.95168,24,140.50492,24,127.99963,24,115.4945,41.82047,106.048,46.67683,94.31079c4.68477-11.32253-1.41993-30.6459,7.78406-39.8499s28.52746-3.09935,39.85-7.78412C106.04832,41.82037,115.49508,24,128.00037,24c12.50513,0,21.95163,17.82047,33.68884,22.67683,11.32253,4.68477,30.6459-1.41993,39.8499,7.78406s3.09935,28.52746,7.78412,39.85C214.17963,106.04832,232,115.49508,232,128.00037c0,12.50513-17.82047,21.95163-22.67683,33.68884-4.68477,11.32253,1.41993,30.6459-7.78406,39.8499s-28.52745,3.09935-39.85,7.78412C149.95168,214.17963,140.50492,232,127.99963,232c-12.50513,0-21.95163-17.82047-33.68884-22.67683C82.98826,204.6384,63.66489,210.7431,54.46089,201.53911Z" opacity="0.2"></path><path d="M54.46089,201.53911c-9.204-9.204-3.09935-28.52745-7.78412-39.85C41.82037,149.95168,24,140.50492,24,127.99963,24,115.4945,41.82047,106.048,46.67683,94.31079c4.68477-11.32253-1.41993-30.6459,7.78406-39.8499s28.52746-3.09935,39.85-7.78412C106.04832,41.82037,115.49508,24,128.00037,24c12.50513,0,21.95163,17.82047,33.68884,22.67683,11.32253,4.68477,30.6459-1.41993,39.8499,7.78406s3.09935,28.52746,7.78412,39.85C214.17963,106.04832,232,115.49508,232,128.00037c0,12.50513-17.82047,21.95163-22.67683,33.68884-4.68477,11.32253,1.41993,30.6459-7.78406,39.8499s-28.52745,3.09935-39.85,7.78412C149.95168,214.17963,140.50492,232,127.99963,232c-12.50513,0-21.95163-17.82047-33.68884-22.67683C82.98826,204.6384,63.66489,210.7431,54.46089,201.53911Z" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path><polyline points="172 104 113.333 160 84 132" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline></svg> You save $10.00 on this order.</span>
+					<span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--themecolor)" viewBox="0 0 256 256">
+							<rect width="256" height="256" fill="none"></rect>
+							<path d="M54.46089,201.53911c-9.204-9.204-3.09935-28.52745-7.78412-39.85C41.82037,149.95168,24,140.50492,24,127.99963,24,115.4945,41.82047,106.048,46.67683,94.31079c4.68477-11.32253-1.41993-30.6459,7.78406-39.8499s28.52746-3.09935,39.85-7.78412C106.04832,41.82037,115.49508,24,128.00037,24c12.50513,0,21.95163,17.82047,33.68884,22.67683,11.32253,4.68477,30.6459-1.41993,39.8499,7.78406s3.09935,28.52746,7.78412,39.85C214.17963,106.04832,232,115.49508,232,128.00037c0,12.50513-17.82047,21.95163-22.67683,33.68884-4.68477,11.32253,1.41993,30.6459-7.78406,39.8499s-28.52745,3.09935-39.85,7.78412C149.95168,214.17963,140.50492,232,127.99963,232c-12.50513,0-21.95163-17.82047-33.68884-22.67683C82.98826,204.6384,63.66489,210.7431,54.46089,201.53911Z" opacity="0.2"></path>
+							<path d="M54.46089,201.53911c-9.204-9.204-3.09935-28.52745-7.78412-39.85C41.82037,149.95168,24,140.50492,24,127.99963,24,115.4945,41.82047,106.048,46.67683,94.31079c4.68477-11.32253-1.41993-30.6459,7.78406-39.8499s28.52746-3.09935,39.85-7.78412C106.04832,41.82037,115.49508,24,128.00037,24c12.50513,0,21.95163,17.82047,33.68884,22.67683,11.32253,4.68477,30.6459-1.41993,39.8499,7.78406s3.09935,28.52746,7.78412,39.85C214.17963,106.04832,232,115.49508,232,128.00037c0,12.50513-17.82047,21.95163-22.67683,33.68884-4.68477,11.32253,1.41993,30.6459-7.78406,39.8499s-28.52745,3.09935-39.85,7.78412C149.95168,214.17963,140.50492,232,127.99963,232c-12.50513,0-21.95163-17.82047-33.68884-22.67683C82.98826,204.6384,63.66489,210.7431,54.46089,201.53911Z" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+							<polyline points="172 104 113.333 160 84 132" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+						</svg> You save $10.00 on this order.</span>
 				</div>
 
 				<!-- Cart Price and Button
@@ -112,7 +118,12 @@
 						<small class="text-uppercase ls1">Total</small>
 						<h4 class="fw-medium font-body mb-0">$69.97</h4>
 					</div>
-					<a href="#" class="button btn-block text-center m-0 fw-normal"><i style="position: relative; top: -2px;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#FFF" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M40,192a16,16,0,0,0,16,16H216a8,8,0,0,0,8-8V88a8,8,0,0,0-8-8H56A16,16,0,0,1,40,64Z" opacity="0.2"></path><path d="M40,64V192a16,16,0,0,0,16,16H216a8,8,0,0,0,8-8V88a8,8,0,0,0-8-8H56A16,16,0,0,1,40,64v0A16,16,0,0,1,56,48H192" fill="none" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"></path><circle cx="180" cy="144" r="12"></circle></svg></i> Checkout</a>
+					<a href="#" class="button btn-block text-center m-0 fw-normal"><i style="position: relative; top: -2px;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="#FFF" viewBox="0 0 256 256">
+								<rect width="256" height="256" fill="none"></rect>
+								<path d="M40,192a16,16,0,0,0,16,16H216a8,8,0,0,0,8-8V88a8,8,0,0,0-8-8H56A16,16,0,0,1,40,64Z" opacity="0.2"></path>
+								<path d="M40,64V192a16,16,0,0,0,16,16H216a8,8,0,0,0,8-8V88a8,8,0,0,0-8-8H56A16,16,0,0,1,40,64v0A16,16,0,0,1,56,48H192" fill="none" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"></path>
+								<circle cx="180" cy="144" r="12"></circle>
+							</svg></i> Checkout</a>
 				</div>
 			</div>
 
@@ -132,14 +143,25 @@
 					<h4 class="mb-2 mb-md-0 h6 fw-normal" id="hide">Free Shipping on every order</h4>
 
 					@if (Route::has('login'))
-						@auth
-						<x-app-layout></x-app-layout>
-						@else
-						<h4 class="mb-0 h6 fw-normal">
+					@auth
+					<h4 class="mb-0 h6 fw-normal d-flex justify-content-center">
+						<a href="{{ route('profile.edit') }}" class="button button-border py-1 nott ls0 fw-normal button-dark border-width-1 border-color h-bg-color">{{Auth::user()->name }}</a>
+						<!-- Authentication -->
+						<form method="POST" action="{{ route('logout') }}" class="mb-0">
+							@csrf
+
+							<x-dropdown-link :href="route('logout')" onclick="event.preventDefault();
+                                                this.closest('form').submit();" class="button button-border py-1 nott ls0 fw-normal button-dark border-width-1 border-color h-bg-color" style="padding: 4px 22px !important">
+								{{ __('Log Out') }}
+							</x-dropdown-link>
+						</form>
+					</h4>
+					@else
+					<h4 class="mb-0 h6 fw-normal">
 						<a href="{{ route('login') }}" class="button button-border py-1 nott ls0 fw-normal button-dark border-width-1 border-color h-bg-color">Login</a>
 						<a href="{{ route('register') }}" class="button button-border py-1 nott ls0 fw-normal button-dark border-width-1 border-color h-bg-color">Register</a>
-						</h4>
-						@endauth
+					</h4>
+					@endauth
 					@endif
 				</div>
 			</div>
@@ -165,15 +187,33 @@
 							============================================= -->
 							<div id="top-search" class="header-misc-icon">
 								<a href="#" id="top-search-trigger">
-									<i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="var(--themecolor)" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><circle cx="115.99512" cy="116" r="84" opacity="0.2"></circle><circle cx="115.99512" cy="116" r="84" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle><line x1="175.38868" y1="175.40039" x2="223.98926" y2="224.00098" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line></svg></i>
-									<i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="var(--themecolor)" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><circle cx="128" cy="128" r="96" opacity="0.2"></circle><circle cx="128" cy="128" r="96" fill="none" stroke="var(--themecolor)" stroke-miterlimit="10" stroke-width="16"></circle><line x1="160" y1="96" x2="96" y2="160" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><line x1="160" y1="160" x2="96" y2="96" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line></svg></i>
+									<i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="var(--themecolor)" viewBox="0 0 256 256">
+											<rect width="256" height="256" fill="none"></rect>
+											<circle cx="115.99512" cy="116" r="84" opacity="0.2"></circle>
+											<circle cx="115.99512" cy="116" r="84" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle>
+											<line x1="175.38868" y1="175.40039" x2="223.98926" y2="224.00098" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+										</svg></i>
+									<i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="var(--themecolor)" viewBox="0 0 256 256">
+											<rect width="256" height="256" fill="none"></rect>
+											<circle cx="128" cy="128" r="96" opacity="0.2"></circle>
+											<circle cx="128" cy="128" r="96" fill="none" stroke="var(--themecolor)" stroke-miterlimit="10" stroke-width="16"></circle>
+											<line x1="160" y1="96" x2="96" y2="160" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+											<line x1="160" y1="160" x2="96" y2="96" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+										</svg></i>
 								</a>
 							</div><!-- #top-search end -->
 
 							<!-- Top Cart
 							============================================= -->
 							<div id="top-cart" class="header-misc-icon">
-								<a href="#" class="side-panel-trigger"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="var(--themecolor)" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M62.54543,144H188.10132a16,16,0,0,0,15.74192-13.13783L216,64H48Z" opacity="0.2"></path><path d="M184,184H69.81818L41.92162,30.56892A8,8,0,0,0,34.05066,24H16" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path><circle cx="80" cy="204" r="20" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle><circle cx="184" cy="204" r="20" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle><path d="M62.54543,144H188.10132a16,16,0,0,0,15.74192-13.13783L216,64H48" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path></svg><span class="top-cart-number">3</span></a>
+								<a href="#" class="side-panel-trigger"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="var(--themecolor)" viewBox="0 0 256 256">
+										<rect width="256" height="256" fill="none"></rect>
+										<path d="M62.54543,144H188.10132a16,16,0,0,0,15.74192-13.13783L216,64H48Z" opacity="0.2"></path>
+										<path d="M184,184H69.81818L41.92162,30.56892A8,8,0,0,0,34.05066,24H16" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+										<circle cx="80" cy="204" r="20" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle>
+										<circle cx="184" cy="204" r="20" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle>
+										<path d="M62.54543,144H188.10132a16,16,0,0,0,15.74192-13.13783L216,64H48" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
+									</svg><span class="top-cart-number">3</span></a>
 							</div><!-- #top-cart end -->
 
 						</div>
@@ -181,8 +221,50 @@
 						<!-- Mobile Menu Icon
 						============================================= -->
 						<div id="primary-menu-trigger">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256"><defs><style>.a,.c{fill:none;}.b{fill:var(--themecolor);opacity:0.2;}.c,.d{stroke:var(--themecolor);}.c{stroke-miterlimit:10;stroke-width:14px;}.d{stroke-linecap:round;stroke-linejoin:round;stroke-width:13px;}</style></defs><rect class="a" width="24" height="24"/><circle class="b" cx="96" cy="96" r="96" transform="translate(32 32)"/><circle class="c" cx="96" cy="96" r="96" transform="translate(32 32)"/><line class="d" x2="85" transform="translate(86 127)"/><line class="d" x2="85" transform="translate(86 97)"/><line class="d" x2="85" transform="translate(86 159)"/></svg>
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--themecolor)" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><circle cx="128" cy="128" r="96" opacity="0.2"></circle><circle cx="128" cy="128" r="96" fill="none" stroke="var(--themecolor)" stroke-miterlimit="10" stroke-width="16"></circle><line x1="160" y1="96" x2="96" y2="160" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><line x1="160" y1="160" x2="96" y2="96" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line></svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256">
+								<defs>
+									<style>
+										.a,
+										.c {
+											fill: none;
+										}
+
+										.b {
+											fill: var(--themecolor);
+											opacity: 0.2;
+										}
+
+										.c,
+										.d {
+											stroke: var(--themecolor);
+										}
+
+										.c {
+											stroke-miterlimit: 10;
+											stroke-width: 14px;
+										}
+
+										.d {
+											stroke-linecap: round;
+											stroke-linejoin: round;
+											stroke-width: 13px;
+										}
+									</style>
+								</defs>
+								<rect class="a" width="24" height="24" />
+								<circle class="b" cx="96" cy="96" r="96" transform="translate(32 32)" />
+								<circle class="c" cx="96" cy="96" r="96" transform="translate(32 32)" />
+								<line class="d" x2="85" transform="translate(86 127)" />
+								<line class="d" x2="85" transform="translate(86 97)" />
+								<line class="d" x2="85" transform="translate(86 159)" />
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--themecolor)" viewBox="0 0 256 256">
+								<rect width="256" height="256" fill="none"></rect>
+								<circle cx="128" cy="128" r="96" opacity="0.2"></circle>
+								<circle cx="128" cy="128" r="96" fill="none" stroke="var(--themecolor)" stroke-miterlimit="10" stroke-width="16"></circle>
+								<line x1="160" y1="96" x2="96" y2="160" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+								<line x1="160" y1="160" x2="96" y2="96" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+							</svg>
 						</div>
 
 						<!-- Primary Navigation
@@ -196,7 +278,9 @@
 									</a>
 								</li>
 								<li class="menu-item mega-menu mega-menu-full">
-									<a href="/shop" class="menu-link"><div>Shop</div></a>
+									<a href="/shop" class="menu-link">
+										<div>Shop</div>
+									</a>
 
 									<!-- Menu DropDown
 									============================================= -->
@@ -205,32 +289,44 @@
 											<div class="row">
 												<ul class="sub-menu-container mega-menu-column col-lg-auto">
 													<li class="menu-item">
-														<a class="menu-link" href="/shop"><div>Lamps</div></a>
+														<a class="menu-link" href="/shop">
+															<div>Lamps</div>
+														</a>
 													</li>
 												</ul>
 												<ul class="sub-menu-container mega-menu-column col-lg-auto">
 													<li class="menu-item">
-														<a class="menu-link" href="/shop"><div>Vases</div></a>
+														<a class="menu-link" href="/shop">
+															<div>Vases</div>
+														</a>
 													</li>
 												</ul>
 												<ul class="sub-menu-container mega-menu-column col-lg-auto">
 													<li class="menu-item">
-														<a class="menu-link" href="/shop"><div>Chairs</div></a>
+														<a class="menu-link" href="/shop">
+															<div>Chairs</div>
+														</a>
 													</li>
 												</ul>
 												<ul class="sub-menu-container mega-menu-column col-lg-auto">
 													<li class="menu-item">
-														<a class="menu-link" href="/shop"><div>Tables</div></a>
+														<a class="menu-link" href="/shop">
+															<div>Tables</div>
+														</a>
 													</li>
 												</ul>
 												<ul class="sub-menu-container mega-menu-column col-lg-auto">
 													<li class="menu-item">
-														<a class="menu-link" href="/shop"><div>Sofas</div></a>
+														<a class="menu-link" href="/shop">
+															<div>Sofas</div>
+														</a>
 													</li>
 												</ul>
 												<ul class="sub-menu-container mega-menu-column col-lg-auto">
 													<li class="menu-item">
-														<a class="menu-link" href="/shop"><div>Cupboards</div></a>
+														<a class="menu-link" href="/shop">
+															<div>Cupboards</div>
+														</a>
 													</li>
 												</ul>
 											</div>
@@ -238,13 +334,13 @@
 									</div>
 								</li>
 								<li class="menu-item">
-									<a class="menu-link" href="demo-furniture-about.html">
+									<a class="menu-link" href="/about">
 										<div>About Us</div>
 									</a>
 								</li>
-								<li class="menu-item"><a class="menu-link" href="demo-furniture-contact.html">
-									<div>Contact</div>
-								</a></li>
+								<li class="menu-item"><a class="menu-link" href="/contact">
+										<div>Contact</div>
+									</a></li>
 							</ul>
 
 						</nav><!-- #primary-menu end -->
@@ -263,7 +359,7 @@
 
 		<!-- Hero Section
 		============================================= -->
-        @yield('banner')
+		@yield('banner')
 
 		<!-- Content
 		============================================= -->
@@ -303,9 +399,9 @@
 								<h4 class="ls0 nott">Support</h4>
 
 								<ul class="list-unstyled iconlist ms-0">
-									<li><a href="demo-furniture.html">Home</a></li>
-									<li><a href="demo-furniture-about.html">About</a></li>
-									<li><a href="demo-furniture-contact.html">Contact</a></li>
+									<li><a href="/">Home</a></li>
+									<li><a href="/about">About</a></li>
+									<li><a href="/contact">Contact</a></li>
 								</ul>
 
 							</div>
@@ -320,7 +416,7 @@
 								<ul class="list-unstyled iconlist ms-0">
 									<li><a href="/shop">Shop</a></li>
 									<li><a href="demo-forum-single.html">Single</a></li>
-									<li><a href="demo-furniture-about.html">Who are we</a></li>
+									<li><a href="/about">Who are we</a></li>
 								</ul>
 
 							</div>
@@ -381,7 +477,12 @@
 	<!-- Go To Top
 	============================================= -->
 	<div id="gotoTop" class="bg-color op-07 h-op-1">
-		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#FFF" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><polygon points="48 208 128 128 208 208 48 208" opacity="0.2"></polygon><polygon points="48 208 128 128 208 208 48 208" fill="none" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polygon><polyline points="48 128 128 48 208 128" fill="none" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline></svg>
+		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#FFF" viewBox="0 0 256 256">
+			<rect width="256" height="256" fill="none"></rect>
+			<polygon points="48 208 128 128 208 208 48 208" opacity="0.2"></polygon>
+			<polygon points="48 208 128 128 208 208 48 208" fill="none" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polygon>
+			<polyline points="48 128 128 48 208 128" fill="none" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+		</svg>
 	</div>
 
 	<!-- JavaScripts
@@ -394,4 +495,5 @@
 	<script src="{{ asset('assets/js/functions.js')}}"></script>
 
 </body>
+
 </html>

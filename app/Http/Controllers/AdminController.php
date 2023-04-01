@@ -24,8 +24,7 @@ class AdminController extends Controller
         }
         else
         {
-            // return view('index');
-            return view('dashboard');
+            return view('index');
         }
     }
 }

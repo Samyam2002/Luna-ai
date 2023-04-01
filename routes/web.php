@@ -45,6 +45,7 @@ require __DIR__.'/auth.php';
 
 //pages routes
 Route::get('/shop', [PageController::class, 'shop']);
+Route::get('/about', [PageController::class, 'about']);
 Route::get('/contact', [PageController::class, 'contact']);
 Route::get('/product/{id}', [PageController::class, 'product']);
 

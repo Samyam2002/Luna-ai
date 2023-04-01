@@ -6,6 +6,21 @@ use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
+    //about-us page
+    public function about(){
+        return view('about');
+    }
+
+    //contact page
+    public function contact(){
+        return view('contact');
+    }
+
+    //cart page
+    public function cart(){
+        return view('cart');
+    }
+
     //shop page
     public function shop(){
         // $category=Category::all();
