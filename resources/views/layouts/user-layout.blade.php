@@ -37,6 +37,19 @@
 </head>
 
 <body class="stretched">
+	<!-- AR Scripts
+	============================================= -->
+	<script src="{{ asset('assets/js/functions.js')}}"></script>
+
+	<script src="{{ asset('libs/fas.js')}}"></script>
+    <script type="module">
+        import { App } from '../../public/assets/js/app.js';
+
+        document.addEventListener("DOMContentLoaded", function(){
+            const app = new App();
+            window.app = app;
+        });
+    </script>
 
 	<!-- Cart Panel Background
 	============================================= -->
@@ -490,9 +503,22 @@
 	<script src="{{ asset('assets/js/jquery.js')}}"></script>
 	<script src="{{ asset('assets/js/plugins.min.js')}}"></script>
 
-	<!-- Footer Scripts
+	<!-- AR Scripts
 	============================================= -->
-	<script src="{{ asset('assets/js/functions.js')}}"></script>
+	<!-- <script src="{{ asset('assets/js/functions.js')}}"></script>
+
+	<script src="../libs/fas.js"></script>
+    <script type="module">
+        import { App } from '../assets/js/app.js';
+
+        document.addEventListener("DOMContentLoaded", function(){
+            const app = new App();
+            window.app = app;
+        });
+    </script> -->
+
+    <script src="{{ asset('vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 
 </body>
 

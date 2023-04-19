@@ -38,11 +38,6 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-
-
-
-/*rest of the routes*/
-
 //pages routes
 Route::get('/shop', [PageController::class, 'shop']);
 Route::get('/about', [PageController::class, 'about']);
