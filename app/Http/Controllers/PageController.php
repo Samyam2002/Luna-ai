@@ -8,19 +8,33 @@ use App\Models\Category;
 
 class PageController extends Controller
 {
+    public function index(){
+        $category=Category::all();
+        return view('index', compact('category'));
+    }
+
     //about-us page
     public function about(){
-        return view('about');
+        $category=Category::all();
+        return view('about', compact('category'));
     }
 
     //contact page
     public function contact(){
-        return view('contact');
+        $category=Category::all();
+        return view('contact', compact('category'));
     }
 
     //cart page
     public function cart(){
-        return view('cart');
+        $category=Category::all();
+        return view('cart', compact('category'));
+    }
+
+    //checkout page
+    public function checkout(){
+        $category=Category::all();
+        return view('checkout', compact('category'));
     }
 
     //shop page
@@ -28,13 +42,14 @@ class PageController extends Controller
         $category=Category::all();
         $product=Product::paginate(6);
 
-        return view('shop', compact('product', 'category'));
+        return view('shop', compact('category', 'product'));
     }
 
     //particular product page
     public function product($id){
+        $category=Category::all();
         $product= Product::find($id);
-        return view('product', compact('product'));
+        return view('product', compact('product', 'category'));
     }
 
     //shop page after searching a product
@@ -60,10 +75,10 @@ class PageController extends Controller
     }
 
     //shop page but filtering by category
-    public function searchCategory($id){
+    public function searchCategory($name){
         $category=Category::all();
-        $product = Product::whereHas('category', function ($query) use ($id){
-            $query->where('category_id', $id);
+        $product = Product::whereHas('category', function ($query) use ($name){
+            $query->where('name', $name);
         })->paginate(6);
 
         return view('shop', compact('product', 'category'));

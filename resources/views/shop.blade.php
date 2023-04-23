@@ -5,16 +5,24 @@
 	<div class="container">
 
 		<div class="row justify-content-between align-items-center">
-			<div class="col-auto mb-4">
+			<div class="col-12 col-md-8 mb-4">
 				<h3 class="fw-medium h1">All <span data-animate="svg-underline-animated" class="svg-underline nocolor"><span>Products</span></span></h3>
 			</div>
 
+			<div class="col-12 col-md-4 mb-4 d-flex">
+				<div class="dropdown sortbuttons ms-2">
+					<a class="button button-border m-0 button-dark border-width-1 border-default nott ls0 fw-normal h-bg-color" href="{{url('sortMintoMax')}}">Price (min to max)</a>
+				</div>
+
+				<div class="dropdown sortbuttons ms-2">
+					<a class="button button-border m-0 button-dark border-width-1 border-default nott ls0 fw-normal h-bg-color" href="{{url('sortMaxtoMin')}}">Price (max to min)</a>
+				</div>
+			</div>
 		</div>
 
 		<div class="row">
-			<div class="col-md-9">
+			<div class="col-12">
 				<div id="shop" class="shop row gutter-30 col-mb-30">
-
 					<!-- Products -->
 					@foreach ($product as $products)
 					<div class="product col-lg-4 col-md-4 col-sm-6 col-12">
@@ -41,36 +49,9 @@
 				</div><!-- #shop end -->
 			</div>
 
-			<div class="col-md-3 mb-4">
-				<div class="row">
-					<div class="col-md-12 d-flex">
-						<div class="dropdown sortbuttons ms-2">
-							<a class="button button-border m-0 button-dark border-width-1 border-default nott ls0 fw-normal h-bg-color" href="{{url('sortMintoMax')}}">Price (min to max)</a>
-						</div>
-
-						<div class="dropdown sortbuttons ms-2">
-							<a class="button button-border m-0 button-dark border-width-1 border-default nott ls0 fw-normal h-bg-color" href="{{url('sortMaxtoMin')}}">Price (max to min)</a>
-						</div>
-					</div>
-				</div>
-
-				<div class="row pt-4">
-					<div class="col-md-12 d-flex justify-content-center">
-						<div class="widget widget_links clearfix">
-							<h4>Shop Categories</h4>
-							<ul>
-								@foreach($category as $category)
-								<li><a href="{{url('/cat', $category->id)}}">{{$category->name}}</a></li>
-								@endforeach
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-
 			<div class="clear"></div>
 			{!!$product->withQueryString()->links('pagination::bootstrap-5')!!}
 		</div>
 
 	</div>
-@endsection('content')
+	@endsection('content')

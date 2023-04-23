@@ -37,19 +37,7 @@
 </head>
 
 <body class="stretched">
-	<!-- AR Scripts
-	============================================= -->
-	<script src="{{ asset('assets/js/functions.js')}}"></script>
 
-	<script src="{{ asset('libs/fas.js')}}"></script>
-    <script type="module">
-        import { App } from '../../public/assets/js/app.js';
-
-        document.addEventListener("DOMContentLoaded", function(){
-            const app = new App();
-            window.app = app;
-        });
-    </script>
 
 	<!-- Cart Panel Background
 	============================================= -->
@@ -139,9 +127,7 @@
 							</svg></i> Checkout</a>
 				</div>
 			</div>
-
 		</div>
-
 	</div>
 
 	<!-- Document Wrapper
@@ -179,7 +165,6 @@
 				</div>
 			</div>
 		</div><!-- #top-bar end -->
-
 		<!-- Header
 		============================================= -->
 		<header id="header" class="header-size-sm border-bottom-0">
@@ -190,8 +175,8 @@
 						<!-- Logo
 						============================================= -->
 						<div id="logo" class="mx-auto col-auto flex-column order-2">
-							<a href="demo-furniture.html" class="standard-logo"><img src="demos/furniture/images/logo.png" alt="Canvas Logo"></a>
-							<a href="demo-furniture.html" class="retina-logo"><img src="demos/furniture/images/logo@2x.png" alt="Canvas Logo"></a>
+							<a href="{{url('/')}}" class="standard-logo"><img src="assets/logo.png" alt="Canvas Logo" style="padding:10px"></a>
+							<a href="{{url('/')}}" class="retina-logo"><img src="assets/logo.png" alt="Canvas Logo" style="padding:10px"></a>
 						</div><!-- #logo end -->
 
 						<div class="header-misc col-auto col-lg-3 order-3 justify-content-lg-end ms-0 ms-sm-3 px-0">
@@ -286,7 +271,7 @@
 
 							<ul class="menu-container">
 								<li class="menu-item current">
-									<a class="menu-link" href="demo-furniture.html">
+									<a class="menu-link" href="{{url('/')}}">
 										<div>Home</div>
 									</a>
 								</li>
@@ -294,13 +279,17 @@
 									<a href="/shop" class="menu-link">
 										<div>Shop</div>
 									</a>
-
 									<!-- Menu DropDown
 									============================================= -->
 									<div class="mega-menu-content border-bottom-0">
 										<div class="container">
 											<div class="row">
+												@foreach($category as $category)
 												<ul class="sub-menu-container mega-menu-column col-lg-auto">
+													<li class="menu-item"><a class="menu-link" href="{{url($category->name)}}">{{$category->name}}</a></li>
+												</ul>
+												@endforeach
+												<!-- <ul class="sub-menu-container mega-menu-column col-lg-auto">
 													<li class="menu-item">
 														<a class="menu-link" href="/shop">
 															<div>Lamps</div>
@@ -341,7 +330,7 @@
 															<div>Cupboards</div>
 														</a>
 													</li>
-												</ul>
+												</ul> -->
 											</div>
 										</div>
 									</div>
@@ -353,15 +342,23 @@
 								</li>
 								<li class="menu-item"><a class="menu-link" href="/contact">
 										<div>Contact</div>
-									</a></li>
+									</a>
+								</li>
+								@if (Auth::check() && Auth::user()->is_admin)
+								<li class="menu-item"><a class="menu-link" href="/dashboard">
+										<div>Dashboard</div>
+									</a>
+								</li>
+								@endif
 							</ul>
 
 						</nav><!-- #primary-menu end -->
 
 						<!-- Top Search Form
 						============================================= -->
-						<form class="top-search-form" action="search.html" method="get">
-							<input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter.." autocomplete="off">
+						<form class="top-search-form" action="{{url('search')}}" method="get">
+							@csrf
+							<input type="text" name="search" class="form-control" placeholder="Type &amp; Hit Enter.." autocomplete="off" value="">
 						</form>
 
 					</div>
@@ -398,8 +395,6 @@
 									<li><a href="https://facebook.com/semicolonweb" target="_blank"><i class="icon-facebook"></i> Facebook</a></li>
 									<li><a href="https://instagram.com/semicolonweb" target="_blank"><i class="icon-instagram"></i> Instagram</a></li>
 									<li><a href="https://twitter.com/__semicolon" target="_blank"><i class="icon-twitter"></i> Twitter</a></li>
-									<li><a href="https://youtube.com/c/SemiColonweb/videos" target="_blank"><i class="icon-youtube"></i> YouTube</a></li>
-									<li><a href="https://wa.me/00112233344"><i class="icon-whatsapp"></i> WhatsApp</a></li>
 								</ul>
 
 							</div>
@@ -412,8 +407,8 @@
 								<h4 class="ls0 nott">Support</h4>
 
 								<ul class="list-unstyled iconlist ms-0">
-									<li><a href="/">Home</a></li>
-									<li><a href="/about">About</a></li>
+									<li><a href="/index">Home</a></li>
+									<li><a href="/about">Shop</a></li>
 									<li><a href="/contact">Contact</a></li>
 								</ul>
 
@@ -454,12 +449,12 @@
 						<div class="col-lg-4">
 							<div class="widget subscribe-widget clearfix" data-loader="button">
 								<h4>Subscribe Us</h4>
-								<h5 class="font-body op-04"><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</h5>
+								<h5 class="font-body"><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</h5>
 								<div class="widget-subscribe-form-result"></div>
 								<form id="widget-subscribe-form" action="include/subscribe.php" method="post" class="mb-0">
 									<div class="input-group">
-										<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email Address">
-										<button class="btn btn-dark bg-color px-3 input-group-text" type="submit">Subscribe</button>
+										<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email Address" style="border-color: #000">
+										<button class="btn btn-dark bg-color px-3 input-group-text" style="border-color: #000" type="submit">Subscribe</button>
 									</div>
 								</form>
 							</div>
@@ -476,9 +471,8 @@
 			<div id="copyrights" class="py-3 bg-color-light">
 				<div class="container">
 
-					<div class="d-flex justify-content-between op-04">
+					<div class="d-flex justify-content-center">
 						<span>&copy; 2020 All Rights Reserved by Canvas Inc.</span>
-						<div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
 					</div>
 
 				</div>
@@ -503,22 +497,9 @@
 	<script src="{{ asset('assets/js/jquery.js')}}"></script>
 	<script src="{{ asset('assets/js/plugins.min.js')}}"></script>
 
-	<!-- AR Scripts
+	<!-- Footer Scripts
 	============================================= -->
-	<!-- <script src="{{ asset('assets/js/functions.js')}}"></script>
-
-	<script src="../libs/fas.js"></script>
-    <script type="module">
-        import { App } from '../assets/js/app.js';
-
-        document.addEventListener("DOMContentLoaded", function(){
-            const app = new App();
-            window.app = app;
-        });
-    </script> -->
-
-    <script src="{{ asset('vendor/jquery/jquery.min.js')}}"></script>
-    <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+	<script src="{{ asset('assets/js/functions.js')}}"></script>
 
 </body>
 

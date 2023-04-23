@@ -17,10 +17,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 //Home page
-Route::get('/', function () {
-    // return view('welcome');
-    return view('index');
-});
+// Route::get('/', function () {
+//     return view('index');
+// });
+Route::get('/',[PageController::class, 'index']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -29,7 +29,6 @@ Route::get('/dashboard', function () {
 //show dashboard according the user type
 Route::get('/dashboard',[AdminController::class, 'index'])->name('dashboard');
 
-//???
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -43,21 +42,18 @@ Route::get('/shop', [PageController::class, 'shop']);
 Route::get('/about', [PageController::class, 'about']);
 Route::get('/contact', [PageController::class, 'contact']);
 Route::get('/product/{id}', [PageController::class, 'product']);
+Route::get('/cart', [PageController::class, 'cart']);
+Route::get('/checkout', [PageController::class, 'checkout']);
 
 //to sort the products on the basis of price
 Route::get('/sortMintoMax',[PageController::class, 'sortMintoMax']);
 Route::get('/sortMaxtoMin',[PageController::class, 'sortMaxtoMin']);
-
-//for filtering based on category
-Route::get('/cat/{id}',[PageController::class, 'searchCategory']);
 
 //searching
 Route::get('/search',[PageController::class, 'search']);
 
 //crud functions only for admin
 Route::middleware('auth','is_admin')->group(function(){
-    // Route::get('/admin',[AdminController::class, 'index'])->name('admin.index');
-
     Route::get('/category', [AdminController::class, 'category']);
     Route::post('/add_category', [AdminController::class, 'addCategory']);
     Route::get('/update_category/{id}', [AdminController::class, 'updateCategory']);
@@ -71,3 +67,7 @@ Route::middleware('auth','is_admin')->group(function(){
     Route::post('/edit_product/{id}', [AdminController::class, 'editProduct']);
     Route::get('/delete_product/{id}', [AdminController::class, 'deleteProduct']);
 });
+
+/*this route is placed last since it might affect other routes if placed on top*/
+//for filtering based on category
+Route::get('/{name}',[PageController::class, 'searchCategory']);

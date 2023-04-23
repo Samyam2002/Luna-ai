@@ -9,12 +9,6 @@ use App\Models\Product;
 
 class AdminController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     * 
-     * @return \Illuminate\Http\Response
-    */
-
     //for authorization
     public function index()
     {
@@ -87,10 +81,17 @@ class AdminController extends Controller
         $product->price=$request->price;
         $product->stock=$request->stock;
         $product->category_id=$request->category;
+
         $image=$request->image;
         $imagename=time().'.'.$image->getClientOriginalExtension();
         $request->image->move('product', $imagename);
         $product->image=$imagename;
+
+        $vimage=$request->vimage;
+        $vimagename=time().'.'.$vimage->getClientOriginalExtension();
+        $request->vimage->move('product', $vimagename);
+        $product->vimage=$vimagename;
+
         $product->save();
         
         return redirect()->back()->with('message', 'Product added successfully!!!');
@@ -135,6 +136,15 @@ class AdminController extends Controller
 
             $product->image=$imagename;
         }
+
+        $vimage=$request->vimage;
+        if ($vimage){
+            $vimagename=time().'.'.$vimage->getClientOriginalExtension();
+            $request->vimage->move('product', $vimagename);
+
+            $product->vimage=$vimagename;
+        }
+
         $product->save();
 
         return redirect()->back()->with('message', 'Product updated successfully');

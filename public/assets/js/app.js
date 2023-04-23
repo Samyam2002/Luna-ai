@@ -50,14 +50,16 @@ class App{
         
         //if navigator includes xr and immersive-ar is supported then show the ar-button class
         if ('xr' in navigator){
-            navigator.xr.isSessionSupported( 'immersive-ar').then((supported)=>{
+            navigator.xr.isSessionSupported( 'immersive-ar' ).then( ( supported ) => {
+
                 if (supported){
+                    
                     const collection = document.getElementsByClassName("ar-button");
-                    [...collection].forEach( el=> {
+                    [...collection].forEach( el => {
                         el.style.display = 'block';
-                    }) 
+                    }); 
                 }
-            })
+            });
         }
         
         const self = this;
@@ -171,7 +173,15 @@ class App{
             self.renderer.setAnimationLoop(null);
         }
 
-        navigator.xr.requestSession( 'immersive-ar', sessionInit).then(onSessionStarted);
+        if ( currentSession === null ) {
+
+            navigator.xr.requestSession( 'immersive-ar', sessionInit ).then( onSessionStarted );
+
+        } else {
+
+            currentSession.end();
+
+        }
     }
     
     requestHitTestSource(){
