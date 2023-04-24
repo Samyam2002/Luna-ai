@@ -68,6 +68,7 @@ Route::middleware('auth','is_admin')->group(function(){
     Route::get('/delete_product/{id}', [AdminController::class, 'deleteProduct']);
 });
 
+
 /*this route is placed last since it might affect other routes if placed on top*/
 //for filtering based on category
 Route::get('/{name}',[PageController::class, 'searchCategory']);

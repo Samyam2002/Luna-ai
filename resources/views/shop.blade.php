@@ -31,7 +31,12 @@
 								<a href="{{url('product', $products->id)}}"><img src="product/{{$products->image}}" alt="{{$products->image}}"></a>
 								<div class="bg-overlay">
 									<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
-										<a href="#" class="btn btn-light me-2"><i class="icon-line-shopping-cart"></i></a>
+										<form action="{{url('add_cart')}}" method="post" class="m-0">
+										@csrf
+											<a class="btn btn-light me-2" type="submit" name="quantity" value="1">
+												<i class="icon-line-shopping-cart"></i>
+											</a>
+										</form>
 										<a href="{{url('product', $products->id)}}" class="btn btn-light me-2"><i class="icon-line-more-vertical"></i></a>
 									</div>
 								</div>
