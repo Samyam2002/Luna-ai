@@ -101,56 +101,9 @@
 			</div>
 		</div> <!-- Section End -->
 
-		<!-- 2. Section Shop by Category
-		============================================= -->
-		<div class="container-fluid">
-
-			<!-- Heading Title -->
-			<div class="text-center mt-6 mb-5">
-				<h2 class="h1 fw-normal mb-4">Shop by <span  data-animate="svg-underline-animated" class="svg-underline nocolor"><span>Category</span></span></h2>
-				<a href="demo-furniture-products.html" class="button button-small button-border m-0 button-dark border-width-1 border-default px-4 h-bg-color"><i class="icon-line-grid"></i> View All</a>
-			</div>
-
-			<!-- Categories -->
-			<div class="row item-categories gutter-20">
-				<div class="col-lg-4 col-md-6">
-					<a href="demo-forum-products.html" class="d-block h-op-09 op-ts" style="background: url('demos/furniture/images/categories/sofas.jpg') no-repeat center center; background-size: cover; height: 340px;">
-						<h5 class="text-uppercase ls1 bg-white mb-0">Sofa</h5>
-					</a>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<a href="demo-forum-products.html" class="d-block h-op-09 op-ts" style="background: url('demos/furniture/images/categories/tables.jpg') no-repeat center center; background-size: cover; height: 340px;">
-						<h5 class="text-uppercase ls1 bg-white mb-0">Tables</h5>
-					</a>
-				</div>
-
-				<div class="col-lg-4 col-md-6">
-					<a href="demo-forum-products.html" class="d-block h-op-09 op-ts" style="background: url('demos/furniture/images/categories/chairs.jpg') no-repeat center center; background-size: cover; height: 340px;">
-						<h5 class="text-uppercase ls1 bg-white mb-0">Chairs</h5>
-					</a>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<a href="demo-forum-products.html" class="d-block h-op-09 op-ts" style="background: url('demos/furniture/images/categories/lights.jpg') no-repeat center center; background-size: cover; height: 340px;">
-						<h5 class="text-uppercase ls1 bg-white mb-0">Lights</h5>
-					</a>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<a href="demo-forum-products.html" class="d-block h-op-09 op-ts" style="background: url('demos/furniture/images/categories/wardrobes.jpg') no-repeat center center; background-size: cover; height: 340px;">
-						<h5 class="text-uppercase ls1 bg-white mb-0">Wardrobes</h5>
-					</a>
-				</div>
-				<div class="col-lg-4 col-md-6">
-					<a href="demo-forum-products.html" class="d-block h-op-09 op-ts" style="background: url('demos/furniture/images/categories/beds.jpg') no-repeat center center; background-size: cover; height: 340px;">
-						<h5 class="text-uppercase ls1 bg-white mb-0">Beds</h5>
-					</a>
-				</div>
-			</div>
-
-		</div><!-- Section End -->
-
 		<!-- 3. Section new Arrivals
 		============================================= -->
-		<div class="section custom-bg mt-3 mb-0" style="--custom-bg: #F3F3ED; padding: 100px 0;">
+		<div class="container-fluid mb-0" style="">
 			<div class="container">
 
 				<!-- Shop
@@ -305,26 +258,6 @@
 				</div><!-- #shop end -->
 
 			</div>
-		</div><!-- Section End -->
-
-		<!-- 4. Section Explore your Home & Office
-		============================================= -->
-		<div class="container-fluid">
-
-			<div class="row align-items-lg-center col-mb-30">
-
-				<!-- Image -->
-				<div class="col-xl-8 col-lg-6 px-lg-0 min-vh-50 min-vh-lg-75" style="background: url('demos/furniture/images/section.jpg') no-repeat center center; background-size: cover;">
-				</div>
-
-				<!-- Content -->
-				<div class="col-xl-4 col-lg-6 px-lg-5 py-5">
-					<h3 class="h1 mb-4 fw-normal">Explore your <span data-animate="svg-underline-animated" class="svg-underline nocolor"><span>Home</span></span> & <span data-animate="svg-underline-animated" data-delay="300" class="svg-underline nocolor"><span>Office</span></span> with our Furnitures</h3>
-					<p>Compellingly cultivate synergistic infrastructures rather than fully tested opportunities. Synergistically evisculate web-enabled interfaces for market positioning web services. Continually create business infomediaries and interdependent products.</p>
-					<a href="demo-forum-about.html" class="button button-border m-0 button-dark border-width-1 border-default h-bg-color">Discover Now <i class="icon-long-arrow-right"></i></a>
-				</div>
-			</div>
-
 		</div><!-- Section End -->
 
 		<!-- 5. Section Fetured Boxes

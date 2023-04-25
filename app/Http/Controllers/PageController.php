@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
+use Illuminate\Support\Facades\Auth;
 
 class PageController extends Controller
 {
@@ -82,5 +83,14 @@ class PageController extends Controller
         })->paginate(6);
 
         return view('shop', compact('product', 'category'));
+    }
+
+    public function addCart($id){
+        if (Auth::id()){
+            return redirect() -> back();
+        }
+        else{
+            return redirect('login');
+        }
     }
 }

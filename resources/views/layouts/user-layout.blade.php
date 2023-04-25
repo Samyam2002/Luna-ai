@@ -386,7 +386,7 @@
 					<div class="row col-mb-30">
 
 						<!-- Footer Col 1 -->
-						<div class="col-lg-2 col-md-3 col-6">
+						<div class="col-lg-3 col-md-4 col-6">
 							<div class="widget widget_links widget-li-noicon">
 
 								<h4 class="ls0 nott">Social</h4>
@@ -401,7 +401,7 @@
 						</div>
 
 						<!-- Footer Col 2 -->
-						<div class="col-lg-2 col-md-3 col-6">
+						<div class="col-lg-2 col-md-4 col-6">
 							<div class="widget widget_links widget-li-noicon">
 
 								<h4 class="ls0 nott">Support</h4>
@@ -415,23 +415,8 @@
 							</div>
 						</div>
 
-						<!-- Footer Col 3 -->
-						<div class="col-lg-2 col-md-3 col-6">
-							<div class="widget widget_links widget-li-noicon">
-
-								<h4 class="ls0 nott">Trending</h4>
-
-								<ul class="list-unstyled iconlist ms-0">
-									<li><a href="/shop">Shop</a></li>
-									<li><a href="demo-forum-single.html">Single</a></li>
-									<li><a href="/about">Who are we</a></li>
-								</ul>
-
-							</div>
-						</div>
-
 						<!-- Footer Col 4 -->
-						<div class="col-lg-2 col-md-3 col-6">
+						<div class="col-lg-3 col-md-4 col-6">
 							<div class="widget widget_links widget-li-noicon">
 
 								<h4 class="ls0 nott">Get to Know us</h4>

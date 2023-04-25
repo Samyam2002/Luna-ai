@@ -42,6 +42,7 @@ Route::get('/shop', [PageController::class, 'shop']);
 Route::get('/about', [PageController::class, 'about']);
 Route::get('/contact', [PageController::class, 'contact']);
 Route::get('/product/{id}', [PageController::class, 'product']);
+Route::post('/add_cart/{id}', [PageController::class, 'addCart']);
 Route::get('/cart', [PageController::class, 'cart']);
 Route::get('/checkout', [PageController::class, 'checkout']);
 
