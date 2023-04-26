@@ -40,10 +40,11 @@
 
 								<!-- Product Single - Quantity & Cart Button
 								============================================= -->
-								<form class="cart mb-0 d-flex align-items-center" method="post" enctype='multipart/form-data'>
+								<form class="cart mb-0 d-flex align-items-center" method="post" action="{{url('add_cart', $product->id)}}">
+									@csrf
 									<div class="quantity position-relative mb-3 clearfix">
 										<input type="button" value="-" class="minus">
-										<input type="number" step="1" min="1" max="{{$product->stock}}" name="quantity" value="1" title="Qty" class="qty" />
+										<input type="number" name="quantity" step="1" min="1" max="{{$product->stock}}" value="1" title="Qty" class="qty" />
 										<input type="button" value="+" class="plus">
 
 										<div class="clear"></div>
@@ -53,7 +54,7 @@
 										@else
 										<span class="stock-out">Ooops! There is no more Stock</span>
 										@endif
-									</div>
+									</div>						
 									<button type="submit" class="add-to-cart button button-large fw-medium color button-light bg-white px-lg-4 add-to-cart m-0 mb-3"><i style="position: relative; top: -2px;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="var(--themecolor)" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M62.54543,144H188.10132a16,16,0,0,0,15.74192-13.13783L216,64H48Z" opacity="0.2"></path><path d="M184,184H69.81818L41.92162,30.56892A8,8,0,0,0,34.05066,24H16" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path><circle cx="80" cy="204" r="20" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle><circle cx="184" cy="204" r="20" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle><path d="M62.54543,144H188.10132a16,16,0,0,0,15.74192-13.13783L216,64H48" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path></svg></i> Add to cart</button>
 								</form><!-- Product Single - Quantity & Cart Button End -->
 					

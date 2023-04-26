@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\Cart;
+use App\Models\Order;
 use Illuminate\Support\Facades\Auth;
 
 class PageController extends Controller
@@ -24,18 +26,6 @@ class PageController extends Controller
     public function contact(){
         $category=Category::all();
         return view('contact', compact('category'));
-    }
-
-    //cart page
-    public function cart(){
-        $category=Category::all();
-        return view('cart', compact('category'));
-    }
-
-    //checkout page
-    public function checkout(){
-        $category=Category::all();
-        return view('checkout', compact('category'));
     }
 
     //shop page
@@ -85,12 +75,88 @@ class PageController extends Controller
         return view('shop', compact('product', 'category'));
     }
 
-    public function addCart($id){
+    //cart page
+    public function cart(){
         if (Auth::id()){
-            return redirect() -> back();
+            $category=Category::all();
+            $id = Auth::user()->id;
+            $cart = cart::where('user_id','=', $id)->get();
+            return view('cart', compact('category', 'cart'));
+        }
+        else{
+            return redirect('login');
+        }  
+    }
+
+    //remove from cart
+    public function removeCart($id){
+        $cart = cart::find($id);
+        $cart->delete();
+
+        return redirect()->back();
+    }
+
+    //add products to the cart
+    public function addCart(Request $request, $id){
+        if (Auth::id()){
+            $user = Auth::user();
+            $product = Product::find($id);
+
+            $cart = new Cart;
+            $cart->name = $user->name;
+            $cart->email = $user->email;
+            $cart->phone = $user->phone;
+            $cart->address = $user->address;
+            $cart->user_id = $user->id;
+
+            $cart->product_title = $product->name;
+            $cart->price = $product->price * $request->quantity;
+            $cart->image = $product->image;
+            $cart->product_id = $product->id;
+            $cart->quantity = $request->quantity;
+
+            $cart->save();
+
+            return redirect('cart');
         }
         else{
             return redirect('login');
         }
     }
+
+    //checkout using cash
+    public function cashOrder(){
+        $category=Category::all();
+
+        $user = Auth::user();
+        $userid = $user->id;
+        $data = cart::where('user_id','=',$userid)->get();
+
+        foreach ($data as $data){
+            $order = new Order;
+
+            $order->name = $data->name; //here data is taking input from cart table
+            $order->email = $data->email;
+            $order->phone = $data->phone;
+            $order->address = $data->address;
+            $order->user_id = $data->user_id;
+            $order->product_title = $data->product_title;
+            $order->price = $data->price;
+            $order->quantity = $data->quantity;
+            $order->image = $data->image;
+            $order->product_id = $data->product_id;
+
+            $order->payment_status = 'COD';
+            $order->delivery_status = 'Processing';
+
+            $order->save();
+
+            //to delete data from cart once it is proceeded to checkout
+            $cart_id = $data->id;
+            $cart = cart::find($cart_id);
+            $cart->delete();
+        }
+        return redirect()->back()->with('message', 'Your order is received. Delivery will be very soon');
+    }
+    
 }

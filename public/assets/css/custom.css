@@ -35,5 +35,8 @@
 } */
 
 .atc button:hover{
-	background-color:aqua;
+	background-color:#193532;
+}
+.atc button:hover i{
+	color:#fff;
 }

@@ -44,7 +44,8 @@ Route::get('/contact', [PageController::class, 'contact']);
 Route::get('/product/{id}', [PageController::class, 'product']);
 Route::post('/add_cart/{id}', [PageController::class, 'addCart']);
 Route::get('/cart', [PageController::class, 'cart']);
-Route::get('/checkout', [PageController::class, 'checkout']);
+Route::get('/remove_cart/{id}', [PageController::class, 'removeCart']);
+Route::get('/cash_order', [PageController::class, 'cashOrder']);
 
 //to sort the products on the basis of price
 Route::get('/sortMintoMax',[PageController::class, 'sortMintoMax']);
