@@ -1,279 +1,183 @@
-@extends('layouts.user-layout')
-@section('title', 'Checkout')
-@section('content')
 <!-- Content
 ============================================= -->
-<section id="content">
-    <div class="content-wrap">
-        <div class="container clearfix">
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Laravel 9 - Stripe Payment Gateway Integration Example - ItSolutionStuff.com</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-            <div class="row col-mb-30 gutter-50 mb-4">
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            Returning customer? <a href="login-register.html">Click here to login</a>
-                        </div>
-                    </div>
+	<link rel="stylesheet" href="{{ asset('assets/css/style.css')}}" type="text/css" />
+
+<style>
+    .btn-primary {
+        color: #fff;
+        background-color: #33524F;
+        border-color: #33524F;
+    }
+
+    .btn-primary {
+
+    }
+    </style>
+</head>
+<body>
+
+    
+<div class="container">
+    
+    <h1>Laravel 9 - Stripe Payment Gateway Integration Example <br/> ItSolutionStuff.com</h1>
+    
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="panel panel-default credit-card-box">
+                <div class="panel-heading display-table" >
+                        <h3 class="panel-title" >Payment Details</h3>
                 </div>
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            Have a coupon? <a href="login-register.html">Click here to enter your code</a>
+                <div class="panel-body">
+    
+                    @if (Session::has('success'))
+                        <div class="alert alert-success text-center">
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+                            <p>{{ Session::get('success') }}</p>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row col-mb-50 gutter-50">
-                <div class="col-lg-6">
-                    <h3>Billing Address</h3>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, vel odio non dicta provident sint ex autem mollitia dolorem illum repellat ipsum aliquid illo similique sapiente fugiat minus ratione.</p>
-
-                    <form id="billing-form" name="billing-form" class="row mb-0" action="#" method="post">
-
-                        <div class="col-md-6 form-group">
-                            <label for="billing-form-name">Name:</label>
-                            <input type="text" id="billing-form-name" name="billing-form-name" value="" class="sm-form-control" />
+                    @endif
+    
+                    <form 
+                            role="form" 
+                            action="" 
+                            method="post" 
+                            class="require-validation"
+                            data-cc-on-file="false"
+                            data-stripe-publishable-key="{{ env('STRIPE_KEY') }}"
+                            id="payment-form">
+                        @csrf
+    
+                        <div class='form-row row'>
+                            <div class='col-xs-12 form-group required'>
+                                <label class='control-label'>Name on Card</label> <input
+                                    class='form-control' size='4' type='text'>
+                            </div>
                         </div>
-
-                        <div class="col-md-6 form-group">
-                            <label for="billing-form-lname">Last Name:</label>
-                            <input type="text" id="billing-form-lname" name="billing-form-lname" value="" class="sm-form-control" />
+    
+                        <div class='form-row row'>
+                            <div class='col-xs-12 form-group card required'>
+                                <label class='control-label'>Card Number</label> <input
+                                    autocomplete='off' class='form-control card-number' size='20'
+                                    type='text'>
+                            </div>
                         </div>
-
-                        <div class="w-100"></div>
-
-                        <div class="col-12 form-group">
-                            <label for="billing-form-companyname">Company Name:</label>
-                            <input type="text" id="billing-form-companyname" name="billing-form-companyname" value="" class="sm-form-control" />
+    
+                        <div class='form-row row'>
+                            <div class='col-xs-12 col-md-4 form-group cvc required'>
+                                <label class='control-label'>CVC</label> <input autocomplete='off'
+                                    class='form-control card-cvc' placeholder='ex. 311' size='4'
+                                    type='text'>
+                            </div>
+                            <div class='col-xs-12 col-md-4 form-group expiration required'>
+                                <label class='control-label'>Expiration Month</label> <input
+                                    class='form-control card-expiry-month' placeholder='MM' size='2'
+                                    type='text'>
+                            </div>
+                            <div class='col-xs-12 col-md-4 form-group expiration required'>
+                                <label class='control-label'>Expiration Year</label> <input
+                                    class='form-control card-expiry-year' placeholder='YYYY' size='4'
+                                    type='text'>
+                            </div>
                         </div>
-
-                        <div class="col-12 form-group">
-                            <label for="billing-form-address">Address:</label>
-                            <input type="text" id="billing-form-address" name="billing-form-address" value="" class="sm-form-control" />
+    
+                        <div class='form-row row'>
+                            <div class='col-md-12 error form-group hide'>
+                                <div class='alert-danger alert'>Please correct the errors and try
+                                    again.</div>
+                            </div>
                         </div>
-
-                        <div class="col-12 form-group">
-                            <input type="text" id="billing-form-address2" name="billing-form-adress" value="" class="sm-form-control" />
+    
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <button class="btn btn-primary btn-lg btn-block" type="submit">Pay Now ($100)</button>
+                            </div>
                         </div>
-
-                        <div class="col-12 form-group">
-                            <label for="billing-form-city">City / Town</label>
-                            <input type="text" id="billing-form-city" name="billing-form-city" value="" class="sm-form-control" />
-                        </div>
-
-                        <div class="col-md-6 form-group">
-                            <label for="billing-form-email">Email Address:</label>
-                            <input type="email" id="billing-form-email" name="billing-form-email" value="" class="sm-form-control" />
-                        </div>
-
-                        <div class="col-md-6 form-group">
-                            <label for="billing-form-phone">Phone:</label>
-                            <input type="text" id="billing-form-phone" name="billing-form-phone" value="" class="sm-form-control" />
-                        </div>
-
+                            
                     </form>
                 </div>
-
-                <div class="col-lg-6">
-                    <h3>Shipping Address</h3>
-
-                    <form id="shipping-form" name="shipping-form" class="row mb-0" action="#" method="post">
-
-                        <div class="col-md-6 form-group">
-                            <label for="shipping-form-name">Name:</label>
-                            <input type="text" id="shipping-form-name" name="shipping-form-name" value="" class="sm-form-control" />
-                        </div>
-
-                        <div class="col-md-6 form-group">
-                            <label for="shipping-form-lname">Last Name:</label>
-                            <input type="text" id="shipping-form-lname" name="shipping-form-lname" value="" class="sm-form-control" />
-                        </div>
-
-                        <div class="w-100"></div>
-
-                        <div class="col-12 form-group">
-                            <label for="shipping-form-companyname">Company Name:</label>
-                            <input type="text" id="shipping-form-companyname" name="shipping-form-companyname" value="" class="sm-form-control" />
-                        </div>
-
-                        <div class="col-12 form-group">
-                            <label for="shipping-form-address">Address:</label>
-                            <input type="text" id="shipping-form-address" name="shipping-form-address" value="" class="sm-form-control" />
-                        </div>
-
-                        <div class="col-12 form-group">
-                            <input type="text" id="shipping-form-address2" name="shipping-form-adress" value="" class="sm-form-control" />
-                        </div>
-
-                        <div class="col-12 form-group">
-                            <label for="shipping-form-city">City / Town</label>
-                            <input type="text" id="shipping-form-city" name="shipping-form-city" value="" class="sm-form-control" />
-                        </div>
-
-                        <div class="col-12 form-group">
-                            <label for="shipping-form-message">Notes <small>*</small></label>
-                            <textarea class="sm-form-control" id="shipping-form-message" name="shipping-form-message" rows="6" cols="30"></textarea>
-                        </div>
-
-                    </form>
-                </div>
-
-                <div class="w-100"></div>
-
-                <div class="col-lg-6">
-                    <h4>Your Orders</h4>
-
-                    <div class="table-responsive">
-                        <table class="table cart">
-                            <thead>
-                                <tr>
-                                    <th class="cart-product-thumbnail">&nbsp;</th>
-                                    <th class="cart-product-name">Product</th>
-                                    <th class="cart-product-quantity">Quantity</th>
-                                    <th class="cart-product-subtotal">Total</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="cart_item">
-                                    <td class="cart-product-thumbnail">
-                                        <a href="#"><img width="64" height="64" src="images/shop/thumbs/small/dress-3.jpg" alt="Pink Printed Dress"></a>
-                                    </td>
-
-                                    <td class="cart-product-name">
-                                        <a href="#">Pink Printed Dress</a>
-                                    </td>
-
-                                    <td class="cart-product-quantity">
-                                        <div class="quantity clearfix">
-                                            1x2
-                                        </div>
-                                    </td>
-
-                                    <td class="cart-product-subtotal">
-                                        <span class="amount">$39.98</span>
-                                    </td>
-                                </tr>
-                                <tr class="cart_item">
-                                    <td class="cart-product-thumbnail">
-                                        <a href="#"><img width="64" height="64" src="images/shop/thumbs/small/shoes-2.jpg" alt="Checked Canvas Shoes"></a>
-                                    </td>
-
-                                    <td class="cart-product-name">
-                                        <a href="#">Checked Canvas Shoes</a>
-                                    </td>
-
-                                    <td class="cart-product-quantity">
-                                        <div class="quantity clearfix">
-                                            1x1
-                                        </div>
-                                    </td>
-
-                                    <td class="cart-product-subtotal">
-                                        <span class="amount">$24.99</span>
-                                    </td>
-                                </tr>
-                                <tr class="cart_item">
-                                    <td class="cart-product-thumbnail">
-                                        <a href="#"><img width="64" height="64" src="images/shop/thumbs/small/tshirt-2.jpg" alt="Pink Printed Dress"></a>
-                                    </td>
-
-                                    <td class="cart-product-name">
-                                        <a href="#">Blue Men Tshirt</a>
-                                    </td>
-
-                                    <td class="cart-product-quantity">
-                                        <div class="quantity clearfix">
-                                            1x3
-                                        </div>
-                                    </td>
-
-                                    <td class="cart-product-subtotal">
-                                        <span class="amount">$41.97</span>
-                                    </td>
-                                </tr>
-                            </tbody>
-
-                        </table>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <h4>Cart Totals</h4>
-
-                    <div class="table-responsive">
-                        <table class="table cart">
-                            <tbody>
-                                <tr class="cart_item">
-                                    <td class="border-top-0 cart-product-name">
-                                        <strong>Cart Subtotal</strong>
-                                    </td>
-
-                                    <td class="border-top-0 cart-product-name">
-                                        <span class="amount">$106.94</span>
-                                    </td>
-                                </tr>
-                                <tr class="cart_item">
-                                    <td class="cart-product-name">
-                                        <strong>Shipping</strong>
-                                    </td>
-
-                                    <td class="cart-product-name">
-                                        <span class="amount">Free Delivery</span>
-                                    </td>
-                                </tr>
-                                <tr class="cart_item">
-                                    <td class="cart-product-name">
-                                        <strong>Total</strong>
-                                    </td>
-
-                                    <td class="cart-product-name">
-                                        <span class="amount color lead"><strong>$106.94</strong></span>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div class="accordion clearfix">
-                        <div class="accordion-header">
-                            <div class="accordion-icon">
-                                <i class="accordion-closed icon-line-minus"></i>
-                                <i class="accordion-open icon-line-check"></i>
-                            </div>
-                            <div class="accordion-title">
-                                Direct Bank Transfer
-                            </div>
-                        </div>
-                        <div class="accordion-content clearfix">Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</div>
-
-                        <div class="accordion-header">
-                            <div class="accordion-icon">
-                                <i class="accordion-closed icon-line-minus"></i>
-                                <i class="accordion-open icon-line-check"></i>
-                            </div>
-                            <div class="accordion-title">
-                                Cheque Payment
-                            </div>
-                        </div>
-                        <div class="accordion-content clearfix">Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum.</div>
-
-                        <div class="accordion-header">
-                            <div class="accordion-icon">
-                                <i class="accordion-closed icon-line-minus"></i>
-                                <i class="accordion-open icon-line-check"></i>
-                            </div>
-                            <div class="accordion-title">
-                                Paypal
-                            </div>
-                        </div>
-                        <div class="accordion-content clearfix">Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus. Aenean lacinia bibendum nulla sed consectetur.</div>
-                    </div>
-                    <a href="#" class="button button-3d float-end">Place Order</a>
-                </div>
-            </div>
+            </div>        
         </div>
     </div>
-</section><!-- #content end -->
-@endsection('content')	
+        
+</div>
+    
+</body>
+    
+<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+    
+<script type="text/javascript">
+  
+$(function() {
+  
+    /*------------------------------------------
+    --------------------------------------------
+    Stripe Payment Code
+    --------------------------------------------
+    --------------------------------------------*/
+    
+    var $form = $(".require-validation");
+     
+    $('form.require-validation').bind('submit', function(e) {
+        var $form = $(".require-validation"),
+        inputSelector = ['input[type=email]', 'input[type=password]',
+                         'input[type=text]', 'input[type=file]',
+                         'textarea'].join(', '),
+        $inputs = $form.find('.required').find(inputSelector),
+        $errorMessage = $form.find('div.error'),
+        valid = true;
+        $errorMessage.addClass('hide');
+    
+        $('.has-error').removeClass('has-error');
+        $inputs.each(function(i, el) {
+          var $input = $(el);
+          if ($input.val() === '') {
+            $input.parent().addClass('has-error');
+            $errorMessage.removeClass('hide');
+            e.preventDefault();
+          }
+        });
+     
+        if (!$form.data('cc-on-file')) {
+          e.preventDefault();
+          Stripe.setPublishableKey($form.data('stripe-publishable-key'));
+          Stripe.createToken({
+            number: $('.card-number').val(),
+            cvc: $('.card-cvc').val(),
+            exp_month: $('.card-expiry-month').val(),
+            exp_year: $('.card-expiry-year').val()
+          }, stripeResponseHandler);
+        }
+    
+    });
+      
+    /*------------------------------------------
+    --------------------------------------------
+    Stripe Response Handler
+    --------------------------------------------
+    --------------------------------------------*/
+    function stripeResponseHandler(status, response) {
+        if (response.error) {
+            $('.error')
+                .removeClass('hide')
+                .find('.alert')
+                .text(response.error.message);
+        } else {
+            /* token contains id, last4, and card type */
+            var token = response['id'];
+                 
+            $form.find('input[type=text]').empty();
+            $form.append("<input type='hidden' name='stripeToken' value='" + token + "'/>");
+            $form.get(0).submit();
+        }
+    }
+     
+});
+</script>
+</html>

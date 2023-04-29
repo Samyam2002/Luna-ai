@@ -36,7 +36,7 @@
 
 								<!-- Product Price
 								============================================= -->
-								<h3 class="mb-3 fw-medium text-white">Nrs {{$product->price}}</h3>
+								<h3 class="mb-3 fw-medium text-white">$ {{$product->price}}</h3>
 
 								<!-- Product Single - Quantity & Cart Button
 								============================================= -->

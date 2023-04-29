@@ -29,6 +29,9 @@
 	<link rel="stylesheet" href="{{ asset('demos/furniture/furniture.css')}}" type="text/css" /> <!-- Furniture Custom Css -->
 	<link rel="stylesheet" href="{{ asset('demos/furniture/css/fonts.css')}}" type="text/css" /> <!-- Furniture Custom Fonts -->
 	<!-- / -->
+	
+	<!-- Custom styles for this template -->
+	<link href="{{ asset('css/shop-homepage.css" rel="stylesheet')}}">
 
 	<!-- Document Title
 	============================================= -->
@@ -37,6 +40,16 @@
 </head>
 
 <body class="stretched">
+
+	<!-- <script src="libs/fas.js"></script>
+	<script type="module">
+		import { App } from './app.js';
+
+		document.addEventListener("DOMContentLoaded", function() {
+			const app = new App();
+			window.app = app;
+		});
+	</script> -->
 
 	<!-- Document Wrapper
 	============================================= -->
@@ -83,8 +96,8 @@
 						<!-- Logo
 						============================================= -->
 						<div id="logo" class="mx-auto col-auto flex-column order-2">
-							<a href="{{url('/')}}" class="standard-logo"><img src="assets/logo.png" alt="Canvas Logo" style="padding:10px"></a>
-							<a href="{{url('/')}}" class="retina-logo"><img src="assets/logo.png" alt="Canvas Logo" style="padding:10px"></a>
+							<a href="{{url('/index')}}" class="standard-logo"><img src="assets/logo.png" alt="Canvas Logo" style="padding:10px"></a>
+							<a href="{{url('/index')}}" class="retina-logo"><img src="assets/logo.png" alt="Canvas Logo" style="padding:10px"></a>
 						</div><!-- #logo end -->
 
 						<div class="header-misc col-auto col-lg-3 order-3 justify-content-lg-end ms-0 ms-sm-3 px-0">
@@ -127,50 +140,8 @@
 						<!-- Mobile Menu Icon
 						============================================= -->
 						<div id="primary-menu-trigger">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256">
-								<defs>
-									<style>
-										.a,
-										.c {
-											fill: none;
-										}
-
-										.b {
-											fill: var(--themecolor);
-											opacity: 0.2;
-										}
-
-										.c,
-										.d {
-											stroke: var(--themecolor);
-										}
-
-										.c {
-											stroke-miterlimit: 10;
-											stroke-width: 14px;
-										}
-
-										.d {
-											stroke-linecap: round;
-											stroke-linejoin: round;
-											stroke-width: 13px;
-										}
-									</style>
-								</defs>
-								<rect class="a" width="24" height="24" />
-								<circle class="b" cx="96" cy="96" r="96" transform="translate(32 32)" />
-								<circle class="c" cx="96" cy="96" r="96" transform="translate(32 32)" />
-								<line class="d" x2="85" transform="translate(86 127)" />
-								<line class="d" x2="85" transform="translate(86 97)" />
-								<line class="d" x2="85" transform="translate(86 159)" />
-							</svg>
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--themecolor)" viewBox="0 0 256 256">
-								<rect width="256" height="256" fill="none"></rect>
-								<circle cx="128" cy="128" r="96" opacity="0.2"></circle>
-								<circle cx="128" cy="128" r="96" fill="none" stroke="var(--themecolor)" stroke-miterlimit="10" stroke-width="16"></circle>
-								<line x1="160" y1="96" x2="96" y2="160" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-								<line x1="160" y1="160" x2="96" y2="96" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256"><defs><style>.a,.c{fill:none;}.b{fill:var(--themecolor);opacity:0.2;}.c,.d{stroke:var(--themecolor);}.c{stroke-miterlimit:10;stroke-width:14px;}.d{stroke-linecap:round;stroke-linejoin:round;stroke-width:13px;}</style></defs><rect class="a" width="24" height="24"/><circle class="b" cx="96" cy="96" r="96" transform="translate(32 32)"/><circle class="c" cx="96" cy="96" r="96" transform="translate(32 32)"/><line class="d" x2="85" transform="translate(86 127)"/><line class="d" x2="85" transform="translate(86 97)"/><line class="d" x2="85" transform="translate(86 159)"/></svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--themecolor)" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><circle cx="128" cy="128" r="96" opacity="0.2"></circle><circle cx="128" cy="128" r="96" fill="none" stroke="var(--themecolor)" stroke-miterlimit="10" stroke-width="16"></circle><line x1="160" y1="96" x2="96" y2="160" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><line x1="160" y1="160" x2="96" y2="96" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line></svg>
 						</div>
 
 						<!-- Primary Navigation
@@ -385,14 +356,14 @@
 		</svg>
 	</div>
 
+	<!-- Footer Scripts
+	============================================= -->
+	<script src="{{ asset('assets/js/functions.js')}}"></script>
+
 	<!-- JavaScripts
 	============================================= -->
 	<script src="{{ asset('assets/js/jquery.js')}}"></script>
 	<script src="{{ asset('assets/js/plugins.min.js')}}"></script>
-
-	<!-- Footer Scripts
-	============================================= -->
-	<script src="{{ asset('assets/js/functions.js')}}"></script>
 
 	<!-- js to hide the alert notification after 5 seconds-->
 	<script>

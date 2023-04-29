@@ -158,5 +158,12 @@ class PageController extends Controller
         }
         return redirect()->back()->with('message', 'Your order is received. Delivery will be very soon');
     }
+
+    //to pay using card
+    public function checkout($totalprice){
+        $category=Category::all();
+        return view ('checkout', compact('totalprice', 'category'));
+
+    }
     
 }

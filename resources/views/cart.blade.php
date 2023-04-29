@@ -51,7 +51,7 @@
                                 </td>
 
                                 <td class="cart-product-price">
-                                    <span class="amount">Nrs {{$cart->price}}</span>
+                                    <span class="amount">$ {{$cart->price}}</span>
                                 </td>
                             </tr>
                         </tbody>
@@ -59,7 +59,7 @@
                         @endforeach
                     </table>
                     <a href="{{url('cash_order')}}" class="button button-small button-3d m-0">Cash On Delivery</a>
-                    <a href="{{url('/')}}" class="button button-small button-3d m-0">Pay Using Card</a>
+                    <a href="{{url('checkout', $totalprice)}}" class="button button-small button-3d m-0">Pay Using Card</a>
                 </div>
 
                 <div class="col-12 col-md-5 mt-5">
@@ -92,7 +92,7 @@
                                     </td>
 
                                     <td class="cart-product-name">
-                                        <span class="amount color lead"><strong>Nrs {{$totalprice + 100}}</strong></span>
+                                        <span class="amount color lead"><strong>$ {{$totalprice + 100}}</strong></span>
                                     </td>
                                 </tr>
                             </tbody>
