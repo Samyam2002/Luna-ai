@@ -47,6 +47,7 @@ Route::get('/cart', [PageController::class, 'cart']);
 Route::get('/remove_cart/{id}', [PageController::class, 'removeCart']);
 Route::get('/cash_order', [PageController::class, 'cashOrder']);
 Route::get('/checkout/{totalprice}', [PageController::class, 'checkout']);
+Route::post('/stripe', [PageController::class, 'stripePost'])->name('stripe.post');
 
 //to sort the products on the basis of price
 Route::get('/sortMintoMax',[PageController::class, 'sortMintoMax']);

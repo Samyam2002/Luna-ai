@@ -8,6 +8,8 @@ use App\Models\Category;
 use App\Models\Cart;
 use App\Models\Order;
 use Illuminate\Support\Facades\Auth;
+use Stripe;
+use Session;
 
 class PageController extends Controller
 {
@@ -163,7 +165,22 @@ class PageController extends Controller
     public function checkout($totalprice){
         $category=Category::all();
         return view ('checkout', compact('totalprice', 'category'));
+    }
 
+    public function stripePost(Request $request)
+    {
+        Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+    
+        Stripe\Charge::create ([
+                "amount" => 100 * 100,
+                "currency" => "usd",
+                "source" => $request->stripeToken,
+                "description" => "Thanks for the payment" 
+        ]);
+      
+        // Session::flash('success', 'Payment successful!');
+              
+        return back()->with('success', 'Payment successful!');;
     }
     
 }

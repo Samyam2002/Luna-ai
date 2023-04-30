@@ -162,8 +162,8 @@
 					<div class="product col-lg-3 col-md-4 col-sm-6 col-12">
 						<div class="grid-inner">
 							<div class="product-image">
-								<a href="demo-forum-single.html"><img src="demos/furniture/images/shop/4-1.jpg" alt="High Stand Chair"></a>
-								<a href="demo-forum-single.html"><img src="demos/furniture/images/shop/4.jpg" alt="High Stand Chair"></a>
+								<a href="demo-forum-single.html"><img src="demos/furniture/images/shop/5.jpg" alt="High Stand Chair"></a>
+								<a href="demo-forum-single.html"><img src="demos/furniture/images/shop/5-1.jpg" alt="High Stand Chair"></a>
 								<div class="bg-overlay">
 									<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
 										<a href="#" class="btn btn-light me-2"><i class="icon-line-shopping-cart"></i></a>

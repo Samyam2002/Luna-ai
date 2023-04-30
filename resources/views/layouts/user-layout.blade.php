@@ -356,14 +356,14 @@
 		</svg>
 	</div>
 
-	<!-- Footer Scripts
-	============================================= -->
-	<script src="{{ asset('assets/js/functions.js')}}"></script>
-
 	<!-- JavaScripts
 	============================================= -->
 	<script src="{{ asset('assets/js/jquery.js')}}"></script>
 	<script src="{{ asset('assets/js/plugins.min.js')}}"></script>
+
+	<!-- Footer Scripts
+	============================================= -->
+	<script src="{{ asset('assets/js/functions.js')}}"></script>
 
 	<!-- js to hide the alert notification after 5 seconds-->
 	<script>
