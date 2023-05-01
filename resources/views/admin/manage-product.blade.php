@@ -37,12 +37,12 @@
               <td><img src="/product/{{$product->vimage}}" style="width:100px;height: 100px;"></td>
               <td>
                 <a href="{{url('update_product', $product->id)}}">
-                  <button type="button" class="btn btn-outline-info btn-block btn-flat"><i class="fa fa-edit"></i> Edit</button>
+                  <button type="button" class="btn btn-outline-info"><i class="fa fa-edit"></i> Edit</button>
                 </a>
               </td>
               <td>
                 <a onclick="return confirm('Are you sure to delete it?')" href="{{url('delete_product', $product->id)}}">
-                  <button type="button" class="btn btn-outline-info btn-block btn-flat"><i class="fa fa-trash"></i> Delete</button>
+                  <button type="button" class="btn btn-outline-info"><i class="fa fa-trash"></i> Delete</button>
                 </a>
               </td>
             </tr>

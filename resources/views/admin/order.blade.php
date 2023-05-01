@@ -40,7 +40,7 @@
                             <td>{{$order->payment_status}}</td>
                             <td>{{$order->delivery_status}}</td>
                             <td><img src="/product/{{$order->image}}" style="width:50px;height: 50px;"></td>
-                            <td></td>
+                            <td><button type="button" class="btn btn-block btn-outline-info">Done</button></td>
                         </tr>
                         @endforeach
                     </tbody>

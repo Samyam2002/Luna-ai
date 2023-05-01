@@ -8,7 +8,7 @@
       <div class="input-group input-group">
         <input type="text" class="form-control" name="category" placeholder="Write category name">
         <span class="input-group-append">
-          <button type="submit" class="btn btn-info btn-flat">Add Category</button>
+          <button type="submit" class="btn btn-block btn-info">Add Category</button>
         </span>
       </div>
     </form>
@@ -39,12 +39,12 @@
               <td>{{$data->name}}</td>
               <td>
                 <a href="{{url('update_category', $data->id)}}">
-                  <button type="button" class="btn btn-outline-info btn-block btn-flat"><i class="fa fa-edit"></i> Edit</button>
+                  <button type="button" class="btn btn-outline-info"><i class="fa fa-edit"></i> Edit</button>
                 </a>
               </td>
               <td>
                 <a onclick="return confirm('Are you sure to delete it?')" href="{{url('delete_category', $data->id)}}">
-                  <button type="button" class="btn btn-outline-info btn-block btn-flat"><i class="fa fa-trash"></i> Delete</button>
+                  <button type="button" class="btn btn-outline-info"><i class="fa fa-trash"></i> Delete</button>
                 </a>
               </td>
             </tr>
