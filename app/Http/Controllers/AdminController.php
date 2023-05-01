@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Product;
+use App\Models\Order;
 
 class AdminController extends Controller
 {
@@ -149,4 +150,13 @@ class AdminController extends Controller
 
         return redirect()->back()->with('message', 'Product updated successfully');
     }
+
+    //to manage order
+    public function order(){
+
+        $order = Order::all();
+        return view('admin.order', compact('order'));
+    }
+
+
 }

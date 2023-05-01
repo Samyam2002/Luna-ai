@@ -218,6 +218,12 @@
                 <p>Manage Products</p>
               </a>
             </li>
+            <li class="nav-item w">
+              <a href="{{url('/order')}}" class="nav-link">
+                <i class="nav-icon fas fa-shopping-cart"></i>
+                <p>Manage Orders</p>
+              </a>
+            </li>
             <li class="nav-item">
               <a href="{{url('/profile')}}" class="nav-link active" style="background-color: #32514E">
                 {{ __('Profile') }}
