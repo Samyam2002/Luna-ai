@@ -167,16 +167,45 @@ class PageController extends Controller
         return view ('checkout', compact('totalprice', 'category'));
     }
 
-    public function stripePost(Request $request)
+    public function stripePost(Request $request, $totalprice)
     {
         Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
     
         Stripe\Charge::create ([
-                "amount" => 100 * 100,
+                "amount" => ($totalprice+100) * 100,
                 "currency" => "usd",
                 "source" => $request->stripeToken,
                 "description" => "Thanks for the payment" 
         ]);
+
+        $user = Auth::user();
+        $userid = $user->id;
+        $data = cart::where('user_id','=',$userid)->get();
+
+        foreach ($data as $data){
+            $order = new Order;
+
+            $order->name = $data->name; //here data is taking input from cart table
+            $order->email = $data->email;
+            $order->phone = $data->phone;
+            $order->address = $data->address;
+            $order->user_id = $data->user_id;
+            $order->product_title = $data->product_title;
+            $order->price = $data->price;
+            $order->quantity = $data->quantity;
+            $order->image = $data->image;
+            $order->product_id = $data->product_id;
+
+            $order->payment_status = 'Paid';
+            $order->delivery_status = 'Processing';
+
+            $order->save();
+
+            //to delete data from cart once it is proceeded to checkout
+            $cart_id = $data->id;
+            $cart = cart::find($cart_id);
+            $cart->delete();
+        }
       
         // Session::flash('success', 'Payment successful!');
               

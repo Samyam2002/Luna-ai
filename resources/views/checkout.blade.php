@@ -100,7 +100,7 @@
 
                             <div class='form-row row'>
                                 <div class='col-xs-12 form-group required'>
-                                    <label class='control-label'>Total Amount</label> <input autocomplete='off' class='form-control' size='20' type='text' value='{{$totalprice}}' readonly>
+                                    <label class='control-label'>Total Amount</label> <input autocomplete='off' class='form-control' size='20' type='text' value='{{$totalprice + 100}}' readonly>
                                 </div>
                             </div>
 
