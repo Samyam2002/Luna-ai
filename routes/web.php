@@ -73,6 +73,7 @@ Route::middleware('auth','is_admin')->group(function(){
     Route::get('/delete_product/{id}', [AdminController::class, 'deleteProduct']);
 
     Route::get('/order', [AdminController::class, 'order']);
+    Route::get('/delivered/{id}', [AdminController::class, 'delivered']);
 });
 
 

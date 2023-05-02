@@ -40,7 +40,16 @@
                             <td>{{$order->payment_status}}</td>
                             <td>{{$order->delivery_status}}</td>
                             <td><img src="/product/{{$order->image}}" style="width:50px;height: 50px;"></td>
-                            <td><button type="button" class="btn btn-block btn-outline-info">Done</button></td>
+                            <td>
+                            @if($order->delivery_status == 'Processing')  
+                                <a href="{{url('delivered', $order->id)}}" onClick="return confirm('Are you sure this product is delivered?')">
+                                    <button type="button" class="btn btn-block btn-outline-info">Done</button>
+                                </a>
+                            @else
+                                <p style="color:#28a745">Delivered</p>
+                            @endif
+                              
+                            </td>
                         </tr>
                         @endforeach
                     </tbody>

@@ -40,6 +40,14 @@
       counter-increment: section;
       content: counter(section);
     }
+
+    a{
+      color: #28a745;
+    }
+
+    a:hover{
+      color: #32514E;
+    }
   </style>
 </head>
 
