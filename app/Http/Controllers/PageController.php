@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 use App\Models\Product;
 use App\Models\Category;
 use App\Models\Cart;
 use App\Models\Order;
+use App\Notifications\AdminNotification;
+use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Auth;
 use Stripe;
 use Session;
@@ -158,6 +161,9 @@ class PageController extends Controller
             $cart = cart::find($cart_id);
             $cart->delete();
         }
+        $adminUser = User::where('is_admin', 1)->get();
+        // Notification::send($user, new AdminNotification($user));
+        Notification::send($adminUser, new AdminNotification($user));
         return redirect()->back()->with('message', 'Your order is received. Delivery will be very soon');
     }
 
@@ -206,10 +212,16 @@ class PageController extends Controller
             $cart = cart::find($cart_id);
             $cart->delete();
         }
-      
         // Session::flash('success', 'Payment successful!');
-              
+      
         return back()->with('success', 'Payment successful!');;
+    }
+
+    public function markasred($id){
+        if($id){
+            auth()->user()->unreadNotifications->where('id',$id)->markAsRead();
+        }
+        return back();
     }
     
 }

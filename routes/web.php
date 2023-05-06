@@ -49,6 +49,8 @@ Route::get('/cash_order', [PageController::class, 'cashOrder']);
 Route::get('/checkout/{totalprice}', [PageController::class, 'checkout']);
 Route::post('/stripe/{totalprice}', [PageController::class, 'stripePost'])->name('stripe.post');
 
+Route::get('/markasred/{id}', [PageController::class, 'markasred'])->name('markasred');
+
 
 //to sort the products on the basis of price
 Route::get('/sortMintoMax',[PageController::class, 'sortMintoMax']);
@@ -74,6 +76,8 @@ Route::middleware('auth','is_admin')->group(function(){
 
     Route::get('/order', [AdminController::class, 'order']);
     Route::get('/delivered/{id}', [AdminController::class, 'delivered']);
+
+    Route::get('/markasred/{id}', [PageController::class, 'markasred'])->name('markasred');
 });
 
 

@@ -153,7 +153,6 @@ class AdminController extends Controller
 
     //to manage order
     public function order(){
-
         $order = Order::all();
         return view('admin.order', compact('order'));
     }
@@ -166,6 +165,5 @@ class AdminController extends Controller
 
         return redirect()->back();
     }
-
 
 }
