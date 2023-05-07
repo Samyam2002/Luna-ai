@@ -33,6 +33,8 @@
 	<!-- Custom styles for this template -->
 	<link href="{{ asset('css/shop-homepage.css" rel="stylesheet')}}">
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 	<!-- Document Title
 	============================================= -->
 	<title>@yield('title')</title>
@@ -376,6 +378,14 @@
 			// 👇️ hides element (still takes up space on page)
 			// box.style.visibility = 'hidden';
 		}, 5000); // 👈️ time in milliseconds
+	</script>
+
+	<!--script for comment reply thread-->
+	<script type="text/javascript">
+		function reply(caller){
+			$('.replyDiv').insertAfter($(caller));
+			$('.replyDiv').show();
+		}
 	</script>
 
 	<!-- font icons-->

@@ -8,6 +8,7 @@ use App\Models\Product;
 use App\Models\Category;
 use App\Models\Cart;
 use App\Models\Order;
+use App\Models\Comment;
 use App\Notifications\AdminNotification;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Auth;
@@ -217,11 +218,27 @@ class PageController extends Controller
         return back()->with('success', 'Payment successful!');;
     }
 
+    //mark as read for the notifications
     public function markasred($id){
         if($id){
             auth()->user()->unreadNotifications->where('id',$id)->markAsRead();
         }
         return back();
+    }
+
+    //to add the comment
+    public function addComment(Request $request){
+        if (Auth::id()){
+            $comment = new Comment;
+            $comment->name = Auth::user()->name;
+            $comment->user_id = Auth::user()->id;
+            $comment->comment = $request->comment;
+
+            $comment->save();
+        }
+        else{
+            return redirect('login');
+        }
     }
     
 }

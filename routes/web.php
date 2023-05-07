@@ -48,6 +48,7 @@ Route::get('/remove_cart/{id}', [PageController::class, 'removeCart']);
 Route::get('/cash_order', [PageController::class, 'cashOrder']);
 Route::get('/checkout/{totalprice}', [PageController::class, 'checkout']);
 Route::post('/stripe/{totalprice}', [PageController::class, 'stripePost'])->name('stripe.post');
+Route::post('/add_comment', [PageController::class, 'addComment']);
 
 Route::get('/markasred/{id}', [PageController::class, 'markasred'])->name('markasred');
 
