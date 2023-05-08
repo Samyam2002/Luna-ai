@@ -235,6 +235,8 @@ class PageController extends Controller
             $comment->comment = $request->comment;
 
             $comment->save();
+
+            return redirect()->back();
         }
         else{
             return redirect('login');
