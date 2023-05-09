@@ -50,8 +50,6 @@ Route::get('/checkout/{totalprice}', [PageController::class, 'checkout']);
 Route::post('/stripe/{totalprice}', [PageController::class, 'stripePost'])->name('stripe.post');
 Route::post('/add_comment', [PageController::class, 'addComment']);
 
-Route::get('/markasred/{id}', [PageController::class, 'markasred'])->name('markasred');
-
 
 //to sort the products on the basis of price
 Route::get('/sortMintoMax',[PageController::class, 'sortMintoMax']);
@@ -79,6 +77,11 @@ Route::middleware('auth','is_admin')->group(function(){
     Route::get('/delivered/{id}', [AdminController::class, 'delivered']);
 
     Route::get('/markasred/{id}', [PageController::class, 'markasred'])->name('markasred');
+
+    Route::get('/print_pdf/{id}', [AdminController::class, 'printPdf']);
+    Route::get('/send_email/{id}', [AdminController::class, 'sendEmail']);
+
+    Route::get('/search',[AdminController::class, 'search']);
 });
 
 

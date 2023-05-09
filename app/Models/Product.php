@@ -11,13 +11,13 @@ class Product extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function scopeRelatedProducts($query, $count = 10, $inRandomOrder = true){
-        $query = $query->where('category_id', $this->category_id);
+    // public function scopeRelatedProducts($query, $count = 10, $inRandomOrder = true){
+    //     $query = $query->where('category_id', $this->category_id);
 
-        if ($inRandomOrder) {
-            $query->inRandomOrder();
-        }
+    //     if ($inRandomOrder) {
+    //         $query->inRandomOrder();
+    //     }
 
-        return $query->take($count);
-    }
+    //     return $query->take($count);
+    // }
 }

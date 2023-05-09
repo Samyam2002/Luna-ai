@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\Order;
+use Barryvdh\DomPDF\Facade\PDF;
 
 class AdminController extends Controller
 {
@@ -166,4 +167,33 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
+    //to print pdf of the order
+    public function printPdf($id){
+        $order=Order::find($id);
+
+        $path = public_path() . '/product/' . $order->image;
+        $type = pathinfo($path, PATHINFO_EXTENSION);
+        $data = file_get_contents($path);
+        $image = 'data:image/' . $type . ';base64,' . base64_encode($data);
+
+        $pdf = PDF::setOptions(['isHtml5ParserEnabled' => true, 'isRemoteEnabled' => true])->loadView('admin.pdf', compact('order','image'));
+        // return $pdf->download('order-details.pdf');
+        return $pdf->download('order-details.pdf');
+    }
+
+    //in order to send the email
+    //not complete
+    public function sendEmail($id){
+        $order=Order::find($id);
+        $user = $order->user_id;
+        return view('admin.email');
+    }
+
+    //search in Admin
+    public function search(Request $request){
+        $search=$request->search;
+
+        $order = Order::where('name', 'LIKE', "%$search%")->orWhere('phone', 'LIKE', "%$search%")->orWhere('email', 'LIKE', "%$search%")->orWhere('product_title', 'LIKE', "%$search%")->orWhere('payment_status', 'LIKE', "%$search%")->orWhere('delivery_status', 'LIKE', "%$search%")->get();
+        return view('admin.order', compact('order'));
+    }
 }

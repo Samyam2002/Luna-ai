@@ -163,8 +163,12 @@ class PageController extends Controller
             $cart->delete();
         }
         $adminUser = User::where('is_admin', 1)->get();
-        // Notification::send($user, new AdminNotification($user));
         Notification::send($adminUser, new AdminNotification($user));
+        // $orders = Order::whereHas('user', function ($query) use ($userid){
+        //     $query->where('user_id', $userid);
+        // })->with('product')->get();
+        
+        // Notification::send($user, new EmailNotification($user, $orders));
         return redirect()->back()->with('message', 'Your order is received. Delivery will be very soon');
     }
 
