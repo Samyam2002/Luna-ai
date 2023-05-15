@@ -1,4 +1,4 @@
-@extends('admin.index')
+@extends('admin.dashboard')
 @section('title', 'Category')
 @section('content')
 <div class="row justify-content-center">

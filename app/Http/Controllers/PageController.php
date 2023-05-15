@@ -246,5 +246,31 @@ class PageController extends Controller
             return redirect('login');
         }
     }
+
+    public function showOrder(){
+        $category = Category::all();
+        
+        if (Auth::id()){
+            $user = Auth::user();
+
+            $userid = $user->id; 
+
+            $order = Order::where('user_id', '=', $userid)->get();
+            return view('order', compact('category', 'order'));
+        }
+        else{
+            return redirect('login');
+        }
+    }
+
+    public function cancelOrder($id){
+        $order = Order::find($id);
+
+        // $order->delivery_status = "Order cancelled";
+        // $order->save();
+        $order->delete();
+
+        return redirect()->back()->with('message', 'Your order is cancelled');
+    }
     
 }

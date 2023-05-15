@@ -1,4 +1,4 @@
-@extends('admin.index')
+@extends('admin.dashboard')
 @section('title', 'Manage Product')
 @section('content')
 <div class="row">

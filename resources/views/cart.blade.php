@@ -50,7 +50,7 @@
                                     <span class="quantity">{{$cart->quantity}}</span>
                                 </td>
 
-                                <td class="cart-product-price">
+                                <td class="cart-product-quantity">
                                     <span class="amount">$ {{$cart->price}}</span>
                                 </td>
                             </tr>

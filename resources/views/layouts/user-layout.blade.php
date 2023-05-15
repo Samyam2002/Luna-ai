@@ -157,7 +157,7 @@
 									</a>
 								</li>
 								<li class="menu-item mega-menu mega-menu-full">
-									<a href="/shop" class="menu-link">
+									<a href="{{url('shop')}}" class="menu-link">
 										<div>Shop</div>
 									</a>
 									<!-- Menu DropDown
@@ -170,64 +170,27 @@
 													<li class="menu-item"><a class="menu-link" href="{{url($category->name)}}">{{$category->name}}</a></li>
 												</ul>
 												@endforeach
-												<!-- <ul class="sub-menu-container mega-menu-column col-lg-auto">
-													<li class="menu-item">
-														<a class="menu-link" href="/shop">
-															<div>Lamps</div>
-														</a>
-													</li>
-												</ul>
-												<ul class="sub-menu-container mega-menu-column col-lg-auto">
-													<li class="menu-item">
-														<a class="menu-link" href="/shop">
-															<div>Vases</div>
-														</a>
-													</li>
-												</ul>
-												<ul class="sub-menu-container mega-menu-column col-lg-auto">
-													<li class="menu-item">
-														<a class="menu-link" href="/shop">
-															<div>Chairs</div>
-														</a>
-													</li>
-												</ul>
-												<ul class="sub-menu-container mega-menu-column col-lg-auto">
-													<li class="menu-item">
-														<a class="menu-link" href="/shop">
-															<div>Tables</div>
-														</a>
-													</li>
-												</ul>
-												<ul class="sub-menu-container mega-menu-column col-lg-auto">
-													<li class="menu-item">
-														<a class="menu-link" href="/shop">
-															<div>Sofas</div>
-														</a>
-													</li>
-												</ul>
-												<ul class="sub-menu-container mega-menu-column col-lg-auto">
-													<li class="menu-item">
-														<a class="menu-link" href="/shop">
-															<div>Cupboards</div>
-														</a>
-													</li>
-												</ul> -->
 											</div>
 										</div>
 									</div>
 								</li>
 								<li class="menu-item">
-									<a class="menu-link" href="/about">
+									<a class="menu-link" href="{{url('about')}}">
 										<div>About Us</div>
 									</a>
 								</li>
-								<li class="menu-item"><a class="menu-link" href="/contact">
+								<li class="menu-item"><a class="menu-link" href="{{url('contact')}}">
 										<div>Contact</div>
 									</a>
 								</li>
 								@if (Auth::check() && Auth::user()->is_admin)
-								<li class="menu-item"><a class="menu-link" href="/dashboard">
+								<li class="menu-item"><a class="menu-link" href="{{url('dashboard')}}">
 										<div>Dashboard</div>
+									</a>
+								</li>
+								@else
+								<li class="menu-item"><a class="menu-link" href="{{url('show_order')}}">
+										<div>Order</div>
 									</a>
 								</li>
 								@endif
