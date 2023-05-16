@@ -17,20 +17,7 @@
 				<div class="row align-items-center custom-bg" style="--custom-bg: var(--themecolor)">
 					<!-- Map -->
 					<div class="col-md-6 px-lg-0 min-vh-50 min-vh-lg-100 d-flex align-self-stretch">
-						<div class="gmap-bg gmap h-100 position-absolute" data-address="Ottawa, Canada"
-						data-markers='[
-							{address: "London", icon:{ image: "demos/furniture/images/map-pin.svg", iconsize: [36,36], iconanchor: [36,36] }},
-							{address: "San Fransisco",html: "San Fransisco, USA",icon: {image: "demos/furniture/images/map-pin.svg",iconsize: [36,36],iconanchor: [36,36]}},
-							{address: "Melbourne",html: "Melbourne, Australia",icon: {image: "demos/furniture/images/map-pin.svg",iconsize: [36,36],iconanchor: [36,36]}},
-							{address: "New York",html: "New York, USA",icon: {image: "demos/furniture/images/map-pin.svg",iconsize: [36,36],iconanchor: [36,36]}},
-							{address: "New York",html: "New York, New York",icon: {image: "demos/furniture/images/map-pin.svg",iconsize: [36,36],iconanchor: [36,36]}},
-							{address: "Los Angeles",html: "Los Angeles, California",icon: {image: "demos/furniture/images/map-pin.svg",iconsize: [36,36],iconanchor: [36,36]}},
-							{address: "Ottawa",html: "Ottawa, Canada",icon: {image: "demos/furniture/images/map-pin.svg",iconsize: [36,36],iconanchor: [36,36]}},]'
-						data-styles='
-							[{"featureType":"all","elementType":"geometry.fill","stylers":[{"weight":"2.00"}]},{"featureType":"all","elementType":"geometry.stroke","stylers":[{"color":"#9c9c9c"}]},{"featureType":"all","elementType":"labels.text","stylers":[{"visibility":"on"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"landscape.man_made","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":"#eeeeee"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#7b7b7b"}]},{"featureType":"road","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#46bcec"},{"visibility":"on"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#c8d7d4"}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"color":"#070707"}]},{"featureType":"water","elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]}]'
-						data-scrollwheel="false" data-zoom="4" data-control-zoom="true"
-						style=" top: 0; left: 0; width: 100%; z-index: 1;"></div>
-						<div class="position-absolute pos-x-center pos-y-center m-0 text-white-50">Map loading...</div>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.6647671403853!2d85.27455057440687!3d27.696754225960596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1936b0145d1b%3A0x444416aa1d589275!2sSalik%20Chowk%20Park!5e0!3m2!1sen!2snp!4v1684255854350!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 					</div>
 
 					<!-- Content -->
@@ -147,7 +134,7 @@
 
 						<h3 class="mt-3 mb-5 fw-normal h2">Don't Follow the Crowd, Follow us on <span data-animate="svg-underline-animated" class="svg-underline nocolor"><span>Instagram</span></span></h3>
 
-						<a href="https://instagram.com/semicolonweb" target="_blank" class="button button-large button-border nott ls0 fw-normal button-light button-white border-width-1 m-0" style="border-color: rgba(255,255,255,0.25)">@semicolonweb</a>
+						<a href="https://instagram.com/semicolonweb" target="_blank" class="button button-large button-border nott ls0 fw-normal button-light button-white border-width-1 m-0" style="border-color: rgba(255,255,255,0.25)">@luna_ai</a>
 					</div>
 				</div>
 

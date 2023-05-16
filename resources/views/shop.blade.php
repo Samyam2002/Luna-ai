@@ -1,7 +1,7 @@
 @extends('layouts.user-layout')
 @section('title', 'Shop')
 @section('content')
-<div class="content-wrap">
+<div class="content-wrap pb-0">
 	<div class="container">
 
 		<div class="row justify-content-between align-items-center">
@@ -46,9 +46,14 @@
 								<div class="col-6 d-flex mt-1 atc" style="justify-content:end">
 									<form action="{{url('add_cart', $products->id)}}" method="post" class="m-0">
 										@csrf
-										<button type="submit" name="quantity" value="1" class="add-to-cart button button-medium fw-medium color button-light px-lg-4 add-to-cart m-0" style="border-radius:10px;"><i class="fa-sharp fa-solid fa-cart-shopping"></i></button>								</form>
+										@if ($products->stock > 0)
+										<button type="submit" name="quantity" value="1" class="add-to-cart button button-medium fw-medium color button-light px-lg-4 add-to-cart m-0" style="border-radius:10px;"><i class="fa-sharp fa-solid fa-cart-shopping"></i></button>	
+										@endif
+									</form>
+									<button class="ar-button" style="margin: 4px 10px;" onclick="window.app.showChair(1);"><i class="fas fa-camera"></i></button>						
 								</div>
 								</div>
+
 							</div>
 						</div>
 					</div>

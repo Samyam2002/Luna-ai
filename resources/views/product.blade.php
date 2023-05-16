@@ -42,6 +42,7 @@
 								============================================= -->
 								<form class="cart mb-0 d-flex align-items-center" method="post" action="{{url('add_cart', $product->id)}}">
 									@csrf
+									@if ($product->stock > 0)
 									<div class="quantity position-relative mb-3 clearfix">
 										<input type="button" value="-" class="minus">
 										<input type="number" name="quantity" step="1" min="1" max="{{$product->stock}}" value="1" title="Qty" class="qty" />
@@ -49,11 +50,8 @@
 
 										<div class="clear"></div>
 
-										@if ($product->stock > 0)
 										<span class="stock-in">Only {{$product->stock}} Stocks Available</span>
-										@else
-										<span class="stock-out">Ooops! There is no more Stock</span>
-										@endif
+									
 									</div>
 									<button type="submit" class="add-to-cart button button-large fw-medium color button-light bg-white px-lg-4 add-to-cart m-0 mb-3"><i style="position: relative; top: -2px;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="var(--themecolor)" viewBox="0 0 256 256">
 												<rect width="256" height="256" fill="none"></rect>
@@ -63,6 +61,9 @@
 												<circle cx="184" cy="204" r="20" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle>
 												<path d="M62.54543,144H188.10132a16,16,0,0,0,15.74192-13.13783L216,64H48" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
 											</svg></i> Add to cart</button>
+											@else
+										<span class="stock-out" style="color:red;">Sorry! Stock Unavailable</span>
+										@endif
 								</form><!-- Product Single - Quantity & Cart Button End -->
 
 								<!-- Line
@@ -98,7 +99,7 @@
 						<div class="mb-0">
 							<ul class="nav canvas-tabs tabs nav-tabs mb-3" id="tab-1" role="tablist" style="--bs-nav-link-font-weight: 500;">
 								<li class="nav-item" role="presentation">
-									<button class="nav-link container-modules-loaded active" id="canvas-tabs-3-tab" data-bs-toggle="pill" data-bs-target="#tabs-3" type="button" role="tab" aria-controls="canvas-tabs-3" aria-selected="true"><i class="me-1 bi-star-fill"></i><span class="d-none d-md-inline-block"> Reviews (2)</span></button>
+									<button class="nav-link container-modules-loaded active" id="canvas-tabs-3-tab" data-bs-toggle="pill" data-bs-target="#tabs-3" type="button" role="tab" aria-controls="canvas-tabs-3" aria-selected="true"><i class="me-1 bi-star-fill"></i><span class="d-none d-md-inline-block"> Reviews </span></button>
 								</li>
 							</ul>
 							<div id="canvas-tab-alt-content" class="tab-content">

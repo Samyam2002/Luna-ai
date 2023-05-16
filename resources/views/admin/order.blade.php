@@ -14,7 +14,6 @@
                         <tr>
                             <th style="width: 10px">#</th>
                             <th>Name</th>
-                            <!-- <th>Email</th> -->
                             <th>Address</th>
                             <th>Phone</th>
                             <th>Product</th>
@@ -25,7 +24,6 @@
                             <th>Image</th>
                             <th>Status</th>
                             <th>Pdf</th>
-                            <th>Email</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -56,13 +54,6 @@
                                 <a href="{{url('print_pdf', $order->id)}}">
                                     <button type="button" class="btn btn-block btn-outline-info">
                                         <i class="fas fa-download"></i>
-                                    </button>
-                                </a>
-                            </td>
-                            <td>
-                                <a href="{{url('send_email', $order->id)}}">
-                                    <button type="button" class="btn btn-block btn-outline-info">
-                                        <i class="fas fa-envelope"></i>
                                     </button>
                                 </a>
                             </td>

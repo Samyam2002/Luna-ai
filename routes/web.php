@@ -83,7 +83,7 @@ Route::middleware('auth','is_admin')->group(function(){
     Route::get('/print_pdf/{id}', [AdminController::class, 'printPdf']);
     Route::get('/send_email/{id}', [AdminController::class, 'sendEmail']);
 
-    Route::get('/search',[AdminController::class, 'search']);
+    Route::get('/searchAP',[AdminController::class, 'searchAP']);
 });
 
 

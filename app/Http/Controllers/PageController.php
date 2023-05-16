@@ -19,8 +19,9 @@ use Session;
 class PageController extends Controller
 {
     public function index(){
+        $product=Product::paginate(5);
         $category=Category::all();
-        return view('index', compact('category'));
+        return view('index', compact('category', 'product'));
     }
 
     //about-us page
@@ -179,13 +180,6 @@ class PageController extends Controller
             $cart = cart::find($cart_id);
             $cart->delete();
         }
-        $adminUser = User::where('is_admin', 1)->get();
-        Notification::send($adminUser, new AdminNotification($user));
-        // $orders = Order::whereHas('user', function ($query) use ($userid){
-        //     $query->where('user_id', $userid);
-        // })->with('product')->get();
-        
-        // Notification::send($user, new EmailNotification($user, $orders));
         return redirect()->back()->with('message', 'Your order is received. Delivery will be very soon');
     }
 
@@ -256,6 +250,10 @@ class PageController extends Controller
             $comment->comment = $request->comment;
 
             $comment->save();
+
+            $user = Auth::user();
+            $adminUser = User::where('is_admin', 1)->get();
+            Notification::send($adminUser, new AdminNotification($user));
 
             return redirect()->back();
         }

@@ -111,149 +111,45 @@
 				<div id="shop" class="shop row gutter-30 col-mb-30 mt-3">
 
 					<!-- Title -->
-					<div class="col-xl-3 col-lg-6">
-						<h3 class="mb-4 fw-normal h1">New <span data-animate="svg-underline-animated" class="svg-underline nocolor"><span>Arrivals</span></span></h3>
+					<div class="col-xl-4 col-lg-6">
+						<h3 class="mb-4 fw-normal h1">Quality <span data-animate="svg-underline-animated" class="svg-underline nocolor"><span>Furnitures</span></span></h3>
 						<p class="op-07 mb-4">Compellingly cultivate synergistic infrastructures rather than fully tested opportunities. Synergistically evisculate web-enabled interfaces.</p>
-						<a href="demo-furniture-products.html" class="button button-border py-1 nott ls0 fw-normal button-dark border-width-1 border-color h-bg-color">New Arrivals</a>
-						<a href="demo-furniture-products.html" class="button button-border py-1 nott ls0 fw-normal button-dark border-width-1 border-color h-bg-color">Popular</a>
+						<a href="{{url('shop')}}" class="button button-border py-1 nott ls0 fw-normal button-dark border-width-1 border-color h-bg-color">Shop Now</a>
 					</div>
 
-					<!-- Product 1 -->
-					<div class="product col-lg-3 col-md-4 col-sm-6 col-12">
+					@foreach ($product as $products)
+					<div class="product col-lg-4 col-md-4 col-sm-6 col-12">
 						<div class="grid-inner">
 							<div class="product-image">
-								<a href="demo-forum-single.html"><img src="demos/furniture/images/shop/2.jpg" alt="Light Grey Sofa"></a>
-								<a href="demo-forum-single.html"><img src="demos/furniture/images/shop/2-1.jpg" alt="Light Grey Sofa"></a>
+								<a href="{{url('product', $products->id)}}"><img src="product/{{$products->image}}" alt="{{$products->image}}"></a>
 								<div class="bg-overlay">
-									<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
-										<a href="#" class="btn btn-light me-2"><i class="icon-line-shopping-cart"></i></a>
-										<a href="demos/furniture/ajax/quick-view.html" class="btn btn-light" data-lightbox="ajax"><i class="icon-line-expand"></i></a>
+									<div class="bg-overlay-content align-items-end justify-content-end" data-hover-animate="fadeIn" data-hover-speed="400">
+										<a href="{{url('product', $products->id)}}" class="btn btn-light me-2"><i class="icon-line-more-vertical"></i></a>
 									</div>
 								</div>
 							</div>
 							<div class="product-desc">
-								<div class="product-title mb-0"><h4 class="mb-0"><a class="fw-medium" href="demo-forum-single.html">Light Grey Sofa</a></h4></div>
-								<h5 class="product-price fw-normal">$799.99</h5>
-							</div>
-						</div>
-					</div>
-
-					<!-- Product 2 -->
-					<div class="product col-lg-3 col-md-4 col-sm-6 col-12">
-						<div class="grid-inner">
-							<div class="product-image">
-								<a href="demo-forum-single.html"><img src="demos/furniture/images/shop/3.jpg" alt="Celling Lights"></a>
-								<a href="demo-forum-single.html"><img src="demos/furniture/images/shop/3-1.jpg" alt="Celling Lights"></a>
-								<div class="bg-overlay">
-									<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
-										<a href="#" class="btn btn-light me-2"><i class="icon-line-shopping-cart"></i></a>
-										<a href="demos/furniture/ajax/quick-view.html" class="btn btn-light" data-lightbox="ajax"><i class="icon-line-expand"></i></a>
+								<div class="row">
+								<div class="col-6">
+									<div class="product-title mb-0">
+										<h4 class="mb-0"><a class="fw-medium" href="{{url('product', $products->id)}}">{{$products->name}}</a></h4>
 									</div>
+									<h5 class="product-price fw-normal">$ {{$products->price}}</h5>
 								</div>
-							</div>
-							<div class="product-desc">
-								<div class="product-title mb-0"><h4 class="mb-0"><a class="fw-medium" href="demo-forum-single.html">Celling Lights</a></h4></div>
-								<h5 class="product-price fw-normal">$39.49</h5>
-							</div>
-						</div>
-					</div>
+								<div class="col-6 d-flex mt-1 atc" style="justify-content:end">
+									<form action="{{url('add_cart', $products->id)}}" method="post" class="m-0">
+										@csrf
+										<button type="submit" name="quantity" value="1" class="add-to-cart button button-medium fw-medium color button-light px-lg-4 add-to-cart m-0" style="border-radius:10px;"><i class="fa-sharp fa-solid fa-cart-shopping"></i></button>	
+										
+									</form>
+									<button class="ar-button" style="margin: 4px 10px;" onclick="window.app.showChair(1);"><i class="fas fa-camera"></i></button>						
+								</div>
+								</div>
 
-					<!-- Product 3 -->
-					<div class="product col-lg-3 col-md-4 col-sm-6 col-12">
-						<div class="grid-inner">
-							<div class="product-image">
-								<a href="demo-forum-single.html"><img src="demos/furniture/images/shop/5.jpg" alt="High Stand Chair"></a>
-								<a href="demo-forum-single.html"><img src="demos/furniture/images/shop/5-1.jpg" alt="High Stand Chair"></a>
-								<div class="bg-overlay">
-									<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
-										<a href="#" class="btn btn-light me-2"><i class="icon-line-shopping-cart"></i></a>
-										<a href="demos/furniture/ajax/quick-view.html" class="btn btn-light" data-lightbox="ajax"><i class="icon-line-expand"></i></a>
-									</div>
-								</div>
-							</div>
-							<div class="product-desc">
-								<div class="product-title mb-0"><h4 class="mb-0"><a class="fw-medium" href="demo-forum-single.html">High Stand Chair</a></h4></div>
-								<h5 class="product-price fw-normal">$24.99</h5>
 							</div>
 						</div>
 					</div>
-
-					<!-- Product 4 -->
-					<div class="product col-lg-3 col-md-4 col-sm-6 col-12">
-						<div class="grid-inner">
-							<div class="product-image">
-								<a href="demo-forum-single.html"><img src="demos/furniture/images/shop/5.jpg" alt="Dining Sofa with Tea-table"></a>
-								<a href="demo-forum-single.html"><img src="demos/furniture/images/shop/5-1.jpg" alt="Dining Sofa with Tea-table"></a>
-								<div class="bg-overlay">
-									<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
-										<a href="#" class="btn btn-light me-2"><i class="icon-line-shopping-cart"></i></a>
-										<a href="demos/furniture/ajax/quick-view.html" class="btn btn-light" data-lightbox="ajax"><i class="icon-line-expand"></i></a>
-									</div>
-								</div>
-							</div>
-							<div class="product-desc">
-								<div class="product-title mb-0"><h4 class="mb-0"><a class="fw-medium" href="demo-forum-single.html">Dining Sofa with Tea-table</a></h4></div>
-								<h5 class="product-price fw-normal">$99.99</h5>
-							</div>
-						</div>
-					</div>
-
-					<!-- Product 5 -->
-					<div class="product col-lg-3 col-md-4 col-sm-6 col-12">
-						<div class="grid-inner">
-							<div class="product-image">
-								<a href="demo-forum-single.html"><img src="demos/furniture/images/shop/6.jpg" alt="Bathroom Cloths Shelves"></a>
-								<div class="bg-overlay">
-									<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
-										<a href="#" class="btn btn-light me-2"><i class="icon-line-shopping-cart"></i></a>
-										<a href="demos/furniture/ajax/quick-view.html" class="btn btn-light" data-lightbox="ajax"><i class="icon-line-expand"></i></a>
-									</div>
-								</div>
-							</div>
-							<div class="product-desc">
-								<div class="product-title mb-0"><h4 class="mb-0"><a class="fw-medium" href="demo-forum-single.html">Bathroom Cloths Shelves</a></h4></div>
-								<h5 class="product-price fw-normal">$23</h5>
-							</div>
-						</div>
-					</div>
-
-					<!-- Product 1 -->
-					<div class="product col-lg-3 col-md-4 col-sm-6 col-12">
-						<div class="grid-inner">
-							<div class="product-image">
-								<a href="demo-forum-single.html"><img src="demos/furniture/images/shop/7.jpg" alt="Golden Lamp for Room"></a>
-								<div class="bg-overlay">
-									<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
-										<a href="#" class="btn btn-light me-2"><i class="icon-line-shopping-cart"></i></a>
-										<a href="demos/furniture/ajax/quick-view.html" class="btn btn-light" data-lightbox="ajax"><i class="icon-line-expand"></i></a>
-									</div>
-								</div>
-							</div>
-							<div class="product-desc">
-								<div class="product-title mb-0"><h4 class="mb-0"><a class="fw-medium" href="demo-forum-single.html">Golden Lamp for Room</a></h4></div>
-								<h5 class="product-price fw-normal">$12.99</h5>
-							</div>
-						</div>
-					</div>
-
-					<!-- Product 6 -->
-					<div class="product col-lg-3 col-md-4 col-sm-6 col-12">
-						<div class="grid-inner">
-							<div class="product-image">
-								<a href="demo-forum-single.html"><img src="demos/furniture/images/shop/8.jpg" alt="White Cuddle Chair with Cusions"></a><a href="demo-forum-single.html"><img src="demos/furniture/images/shop/8-1.jpg" alt="White Cuddle Chair with Cusions"></a>
-								<div class="bg-overlay">
-									<div class="bg-overlay-content align-items-end justify-content-between" data-hover-animate="fadeIn" data-hover-speed="400">
-										<a href="#" class="btn btn-light me-2"><i class="icon-line-shopping-cart"></i></a>
-										<a href="demos/furniture/ajax/quick-view.html" class="btn btn-light" data-lightbox="ajax"><i class="icon-line-expand"></i></a>
-									</div>
-								</div>
-							</div>
-							<div class="product-desc">
-								<div class="product-title mb-0"><h4 class="mb-0"><a class="fw-medium" href="demo-forum-single.html">White Cuddle Chair with Cusions</a></h4></div>
-								<h5 class="product-price fw-normal">$29.99</h5>
-							</div>
-						</div>
-					</div>
+					@endforeach
 
 				</div><!-- #shop end -->
 

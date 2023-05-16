@@ -100,14 +100,14 @@
                             @endif
                         </span>
                     </a>
-                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                    <div class="dropdown-menu dropdown-menu-xl dropdown-menu-right">
 
                         @if(Auth::user())
                         @foreach(auth()->user()->unreadnotifications as $notification)
                         <!-- <a href="{{url('/order')}}" class="dropdown-item"> -->
                         <div class="dropdown-item">
-                            <i class="fas fa-user mr-2"></i><b>{{ $notification->data['name']}}</b> has placed an order on COD.
-                            <a href="{{route('markasred', $notification->id)}}"><i class="fas fa-check-circle"></i></a>
+                            <i class="fas fa-user mr-2"></i><b>{{ $notification->data['name']}}</b> has reviewed a product.
+                            <a href="{{route('markasred', $notification->id)}}" style="float: right;"><i class="fas fa-check-circle"></i></a>
                         </div>
                         <div class="dropdown-divider"></div>
                         @endforeach
@@ -123,7 +123,7 @@
                         <i class="fas fa-search"></i>
                     </a>
                     <div class="navbar-search-block">
-                        <form class="form-inline" action="{{url('search')}}" method="get">
+                        <form class="form-inline" action="{{url('searchAP')}}" method="get">
                             <div class="input-group input-group-sm">
                                 <input class="form-control form-control-navbar" type="text" name="search" placeholder="Search" aria-label="Search">
                                 <div class="input-group-append">

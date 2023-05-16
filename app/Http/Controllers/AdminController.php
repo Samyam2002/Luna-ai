@@ -173,10 +173,17 @@ class AdminController extends Controller
     }
 
     //When delivered, change the delivery and payment status
+    //Also, here the stock should decrease
     public function delivered($id){
         $order = order::find($id);
         $order->delivery_status = "delivered";
         $order->payment_status = "Paid";
+
+        $pid = Order::find($id)->product_id;
+        $product = Product::find($pid);
+        $product->stock = ($product->stock) - ($order->quantity);
+        $product->save();
+        
         $order ->save();
 
         return redirect()->back();

@@ -43,15 +43,17 @@
 
 <body class="stretched">
 
-	<!-- <script src="libs/fas.js"></script>
+	<script src="libs/fas.js"></script>
 	<script type="module">
-		import { App } from './app.js';
+		import {
+			App
+		} from './app.js';
 
 		document.addEventListener("DOMContentLoaded", function() {
 			const app = new App();
 			window.app = app;
 		});
-	</script> -->
+	</script>
 
 	<!-- Document Wrapper
 	============================================= -->
@@ -134,7 +136,9 @@
 										<circle cx="80" cy="204" r="20" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle>
 										<circle cx="184" cy="204" r="20" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle>
 										<path d="M62.54543,144H188.10132a16,16,0,0,0,15.74192-13.13783L216,64H48" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
-									</svg><span class="top-cart-number">2</span></a>
+									</svg>
+									
+								</a>
 							</div><!-- #top-cart end -->
 
 						</div>
