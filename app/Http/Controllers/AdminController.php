@@ -172,6 +172,7 @@ class AdminController extends Controller
         return view('admin.order', compact('order'));
     }
 
+    //When delivered, change the delivery and payment status
     public function delivered($id){
         $order = order::find($id);
         $order->delivery_status = "delivered";

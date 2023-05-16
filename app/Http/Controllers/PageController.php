@@ -9,6 +9,7 @@ use App\Models\Category;
 use App\Models\Cart;
 use App\Models\Order;
 use App\Models\Comment;
+use App\Models\Reply;
 use App\Notifications\AdminNotification;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Auth;
@@ -44,9 +45,11 @@ class PageController extends Controller
 
     //particular product page
     public function product($id){
+        $comment = Comment::orderby('id','desc')->get();
+        $reply = Reply::all();
         $category=Category::all();
         $product= Product::find($id);
-        return view('product', compact('product', 'category'));
+        return view('product', compact('product', 'category', 'comment', 'reply'));
     }
 
     //shop page after searching a product
@@ -106,24 +109,38 @@ class PageController extends Controller
     public function addCart(Request $request, $id){
         if (Auth::id()){
             $user = Auth::user();
+            $user_id = $user->id;
             $product = Product::find($id);
+            $product_exist_id = Cart::where('product_id','=',$id)->where('user_id','=', $user_id)->get('id')->first();
 
-            $cart = new Cart;
-            $cart->name = $user->name;
-            $cart->email = $user->email;
-            $cart->phone = $user->phone;
-            $cart->address = $user->address;
-            $cart->user_id = $user->id;
+            if ($product_exist_id){
+                $cart = Cart::find($product_exist_id)->first();
+                $quantity = $cart->quantity;
+                $cart->quantity = $quantity + $request->quantity;
+                $cart->price = $product->price * $cart->quantity;
 
-            $cart->product_title = $product->name;
-            $cart->price = $product->price * $request->quantity;
-            $cart->image = $product->image;
-            $cart->product_id = $product->id;
-            $cart->quantity = $request->quantity;
+                $cart->save();
 
-            $cart->save();
+                return redirect('cart');
+            }
+            else{
+                $cart = new Cart;
+                $cart->name = $user->name;
+                $cart->email = $user->email;
+                $cart->phone = $user->phone;
+                $cart->address = $user->address;
+                $cart->user_id = $user->id;
 
-            return redirect('cart');
+                $cart->product_title = $product->name;
+                $cart->price = $product->price * $request->quantity;
+                $cart->image = $product->image;
+                $cart->product_id = $product->id;
+                $cart->quantity = $request->quantity;
+
+                $cart->save();
+
+                return redirect('cart');
+            }
         }
         else{
             return redirect('login');
@@ -247,6 +264,7 @@ class PageController extends Controller
         }
     }
 
+    //Shows all the orders (both old(delivered) and new(not yet delivered))
     public function showOrder(){
         $category = Category::all();
         
@@ -263,6 +281,7 @@ class PageController extends Controller
         }
     }
 
+    //cancelling the order will remove order on both customer and admin side
     public function cancelOrder($id){
         $order = Order::find($id);
 
@@ -271,6 +290,26 @@ class PageController extends Controller
         $order->delete();
 
         return redirect()->back()->with('message', 'Your order is cancelled');
+    }
+
+
+    //inorder to add reply to a particular comment
+    public function addReply(Request $request){
+        if (Auth::id()){
+            $reply = new Reply; 
+
+            $reply->name = Auth::user()->name;
+            $reply->user_id = Auth::user()->id;
+            $reply->comment_id = $request->commentId;
+            $reply->reply = $request->reply;
+
+            $reply->save();
+
+            return redirect()->back();
+        }
+        else{
+            return redirect('login');
+        }
     }
     
 }

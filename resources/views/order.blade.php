@@ -17,7 +17,7 @@
             @endif
 
             <div class="row justify-content-center">
-                <div class="col-12 col-md-10">
+                <div class="col-12 col-md-12">
 
                     <table class="table cart mb-3">
                         <thead>

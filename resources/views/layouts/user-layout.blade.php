@@ -29,7 +29,7 @@
 	<link rel="stylesheet" href="{{ asset('demos/furniture/furniture.css')}}" type="text/css" /> <!-- Furniture Custom Css -->
 	<link rel="stylesheet" href="{{ asset('demos/furniture/css/fonts.css')}}" type="text/css" /> <!-- Furniture Custom Fonts -->
 	<!-- / -->
-	
+
 	<!-- Custom styles for this template -->
 	<link href="{{ asset('css/shop-homepage.css" rel="stylesheet')}}">
 
@@ -142,8 +142,50 @@
 						<!-- Mobile Menu Icon
 						============================================= -->
 						<div id="primary-menu-trigger">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256"><defs><style>.a,.c{fill:none;}.b{fill:var(--themecolor);opacity:0.2;}.c,.d{stroke:var(--themecolor);}.c{stroke-miterlimit:10;stroke-width:14px;}.d{stroke-linecap:round;stroke-linejoin:round;stroke-width:13px;}</style></defs><rect class="a" width="24" height="24"/><circle class="b" cx="96" cy="96" r="96" transform="translate(32 32)"/><circle class="c" cx="96" cy="96" r="96" transform="translate(32 32)"/><line class="d" x2="85" transform="translate(86 127)"/><line class="d" x2="85" transform="translate(86 97)"/><line class="d" x2="85" transform="translate(86 159)"/></svg>
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--themecolor)" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><circle cx="128" cy="128" r="96" opacity="0.2"></circle><circle cx="128" cy="128" r="96" fill="none" stroke="var(--themecolor)" stroke-miterlimit="10" stroke-width="16"></circle><line x1="160" y1="96" x2="96" y2="160" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line><line x1="160" y1="160" x2="96" y2="96" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line></svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256">
+								<defs>
+									<style>
+										.a,
+										.c {
+											fill: none;
+										}
+
+										.b {
+											fill: var(--themecolor);
+											opacity: 0.2;
+										}
+
+										.c,
+										.d {
+											stroke: var(--themecolor);
+										}
+
+										.c {
+											stroke-miterlimit: 10;
+											stroke-width: 14px;
+										}
+
+										.d {
+											stroke-linecap: round;
+											stroke-linejoin: round;
+											stroke-width: 13px;
+										}
+									</style>
+								</defs>
+								<rect class="a" width="24" height="24" />
+								<circle class="b" cx="96" cy="96" r="96" transform="translate(32 32)" />
+								<circle class="c" cx="96" cy="96" r="96" transform="translate(32 32)" />
+								<line class="d" x2="85" transform="translate(86 127)" />
+								<line class="d" x2="85" transform="translate(86 97)" />
+								<line class="d" x2="85" transform="translate(86 159)" />
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="var(--themecolor)" viewBox="0 0 256 256">
+								<rect width="256" height="256" fill="none"></rect>
+								<circle cx="128" cy="128" r="96" opacity="0.2"></circle>
+								<circle cx="128" cy="128" r="96" fill="none" stroke="var(--themecolor)" stroke-miterlimit="10" stroke-width="16"></circle>
+								<line x1="160" y1="96" x2="96" y2="160" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+								<line x1="160" y1="160" x2="96" y2="96" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+							</svg>
 						</div>
 
 						<!-- Primary Navigation
@@ -345,11 +387,30 @@
 
 	<!--script for comment reply thread-->
 	<script type="text/javascript">
-		function reply(caller){
+		function reply(caller) {
+			document.getElementById('commentId').value = $(caller).attr('data-Commentid');
 			$('.replyDiv').insertAfter($(caller));
 			$('.replyDiv').show();
 		}
+
+		function reply_close(caller) {
+
+			$('.replyDiv').hide();
+		}
 	</script>
+
+	<!--refresh page and keep scroll position-->
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function(event) {
+			var scrollpos = localStorage.getItem('scrollpos');
+			if (scrollpos) window.scrollTo(0, scrollpos);
+		});
+		window.onbeforeunload = function(e) {
+			localStorage.setItem('scrollpos', window.scrollY);
+		};
+	</script>
+
 
 	<!-- font icons-->
 	<script src="https://kit.fontawesome.com/a8916ae1c2.js" crossorigin="anonymous"></script>
