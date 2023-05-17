@@ -9,7 +9,7 @@
 		<div class="row align-items-start justify-content-center justify-content-xl-start py-6">
 			<div class="col-xl-6 col-lg-9 col-md-10 mt-xl-4 text-center text-xl-start">
 				<p class="op-07 text-white mb-3 text-uppercase ls2 text-smaller">Quality is everyone's Responsibilty</p>
-				<h1 class="display-4 mb-5 text-white fw-medium">A Home Is Not A Home Without <span class="svg-underline nocolor">Furniture</span></h1>
+				<h1 class="display-4 mb-5 text-white fw-medium">Find furniture that speaks to your <span class="svg-underline nocolor">style</span></h1>
 				<a href="{{url('/shop')}}" class="button button-large button-white button-light h-op-09 color m-0 fw-normal color px-4"><i style="position: relative; top: -2px;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="var(--themecolor)" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><rect x="32" y="48" width="192" height="160" rx="8" opacity="0.2"></rect><rect x="32" y="48" width="192" height="160" rx="8" stroke-width="16" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" fill="none"></rect><path d="M168,88a40,40,0,0,1-80,0" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path></svg></i> Shop Now</a>
 			</div>
 		</div>
@@ -198,59 +198,6 @@
 								<h2 class="nott fw-medium h4 mb-4">Secure Payment</h2>
 								<p class="op-06">Continually recaptiualize 2.0 action items after global information. Efficiently strategize holistic networks.</p>
 							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div><!-- Section End -->
-
-		<!-- 6. Section Instagram
-		============================================= -->
-		<div class="section custom-bg my-0 py-0" style="--custom-bg: var(--themecolor);">
-			<div class="row align-items-center no-gutters">
-				<!-- Instagram Center Col - Text -->
-				<div class="col-lg-4 py-5 order-lg-2">
-					<div class="text-center dark p-5">
-						<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#FFF" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M172,36H84A47.99987,47.99987,0,0,0,36,84v88a47.99988,47.99988,0,0,0,48,48h88a47.99988,47.99988,0,0,0,48-48V84A47.99987,47.99987,0,0,0,172,36ZM128,168a40,40,0,1,1,40-40A40.0001,40.0001,0,0,1,128,168Z" opacity="0.2"></path><circle cx="128" cy="128" r="40" fill="none" stroke="#FFF" stroke-miterlimit="10" stroke-width="16"></circle><rect class x="36" y="36" width="184" height="184" rx="48" stroke-width="16" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" fill="none"></rect><circle cx="180" cy="75.99998" r="12"></circle></svg>
-
-						<h3 class="mt-3 mb-5 fw-normal h2">Don't Follow the Crowd, Follow us on <span data-animate="svg-underline-animated" class="svg-underline nocolor"><span>Instagram</span></span></h3>
-
-						<a href="https://instagram.com/semicolonweb" target="_blank" class="button button-large button-border nott ls0 fw-normal button-light button-white border-width-1 m-0" style="border-color: rgba(255,255,255,0.25)">@semicolonweb</a>
-					</div>
-				</div>
-
-				<!-- Instagram Left Col - Image -->
-				<div class="col-lg-4 col-md-6 order-lg-1">
-					<div class="row gutter-4">
-						<div class="col-6">
-							<a class="d-block instagram-image" href="https://instagram.com/semicolonweb" target="_blank" style="background: url('demos/furniture/images/instagram/1.jpg') no-repeat center center; background-size:cover; min-height: 33vh;"></a>
-						</div>
-						<div class="col-6">
-							<a class="d-block instagram-image" href="https://instagram.com/semicolonweb" target="_blank" style="background: url('demos/furniture/images/instagram/2.jpg') no-repeat center center; background-size:cover; min-height: 33vh;"></a>
-						</div>
-						<div class="col-6">
-							<a class="d-block instagram-image" href="https://instagram.com/semicolonweb" target="_blank" style="background: url('demos/furniture/images/instagram/3.jpg') no-repeat center center; background-size:cover; min-height: 33vh;"></a>
-						</div>
-						<div class="col-6">
-							<a class="d-block instagram-image" href="https://instagram.com/semicolonweb" target="_blank" style="background: url('demos/furniture/images/instagram/4.jpg') no-repeat center center; background-size:cover; min-height: 33vh;"></a>
-						</div>
-					</div>
-				</div>
-
-				<!-- Instagram Right Col - Image -->
-				<div class="col-lg-4 col-md-6 order-lg-3 mt-1 mt-md-0 ps-md-1 ps-lg-0">
-					<div class="row gutter-4">
-						<div class="col-6">
-							<a class="d-block instagram-image" href="https://instagram.com/semicolonweb" target="_blank" style="background: url('demos/furniture/images/instagram/5.jpg') no-repeat center center; background-size:cover; min-height: 33vh;"></a>
-						</div>
-						<div class="col-6">
-							<a class="d-block instagram-image" href="https://instagram.com/semicolonweb" target="_blank" style="background: url('demos/furniture/images/instagram/6.jpg') no-repeat center center; background-size:cover; min-height: 33vh;"></a>
-						</div>
-						<div class="col-6">
-							<a class="d-block instagram-image" href="https://instagram.com/semicolonweb" target="_blank" style="background: url('demos/furniture/images/instagram/7.jpg') no-repeat center center; background-size:cover; min-height: 33vh;"></a>
-						</div>
-						<div class="col-6">
-							<a class="d-block instagram-image" href="https://instagram.com/semicolonweb" target="_blank" style="background: url('demos/furniture/images/instagram/8.jpg') no-repeat center center; background-size:cover; min-height: 33vh;"></a>
 						</div>
 					</div>
 				</div>

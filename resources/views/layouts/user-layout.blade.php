@@ -137,7 +137,7 @@
 										<circle cx="184" cy="204" r="20" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle>
 										<path d="M62.54543,144H188.10132a16,16,0,0,0,15.74192-13.13783L216,64H48" fill="none" stroke="var(--themecolor)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></path>
 									</svg>
-									
+
 								</a>
 							</div><!-- #top-cart end -->
 
@@ -320,23 +320,30 @@
 							</div>
 						</div>
 
-						<!-- Footer Col 5 -->
 						<div class="col-lg-4">
-							<div class="widget subscribe-widget clearfix" data-loader="button">
+							<!-- <div class="widget subscribe-widget" data-loader="button"> -->
+							<div class="widget">
+														
+								<!--Alert message if email is subscribed successfully-->
+								@if(session()->has('message'))
+								<div id="hide-box" class="alert alert-success">
+								<button type="button" class="btn-close btn-sm" data-bs-dismiss="alert" aria-hidden="true"></button>
+								{{session()->get('message')}}
+								</div>
+								@endif
+								
 								<h4>Subscribe Us</h4>
 								<h5 class="font-body"><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</h5>
-								<div class="widget-subscribe-form-result"></div>
-								<form id="widget-subscribe-form" action="include/subscribe.php" method="post" class="mb-0">
+								<form action="{{route('subscribe')}}" method="post" class="mb-0" enctype="multipart/form-data">
+									@csrf
 									<div class="input-group">
-										<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email Address" style="border-color: #000">
-										<button class="btn btn-dark bg-color px-3 input-group-text" style="border-color: #000" type="submit">Subscribe</button>
+										<input type="email" name="subscribe_email" class="form-control required email valid" placeholder="Enter your Email Address">
+										<button type="submit" class="btn btn-dark bg-color px-3">Subscribe</button>
 									</div>
 								</form>
 							</div>
 						</div>
-
 					</div>
-
 				</div><!-- .footer-widgets-wrap end -->
 
 			</div>

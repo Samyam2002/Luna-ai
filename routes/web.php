@@ -86,6 +86,8 @@ Route::middleware('auth','is_admin')->group(function(){
     Route::get('/searchAP',[AdminController::class, 'searchAP']);
 });
 
+//newsletter subscription
+Route::post('/subscribe', [PageController::class, 'subscribe'])->name('subscribe');
 
 /*this route is placed last since it might affect other routes if placed on top*/
 //for filtering based on category

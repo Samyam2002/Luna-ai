@@ -16,7 +16,7 @@
 				<!-- 1. Section Map -->
 				<div class="row align-items-center custom-bg" style="--custom-bg: var(--themecolor)">
 					<!-- Map -->
-					<div class="col-md-6 px-lg-0 min-vh-50 min-vh-lg-100 d-flex align-self-stretch">
+					<div class="col-md-6 px-lg-0 min-vh-50 min-vh-lg-100 d-flex align-self-stretch p-0">
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.6647671403853!2d85.27455057440687!3d27.696754225960596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1936b0145d1b%3A0x444416aa1d589275!2sSalik%20Chowk%20Park!5e0!3m2!1sen!2snp!4v1684255854350!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 					</div>
 
@@ -24,40 +24,16 @@
 					<div class="col-md-6 p-5 p-lg-6 dark">
 						<h2 class="h1 fw-normal mb-5">Our <span  data-animate="svg-underline-animated" class="svg-underline nocolor"><span>Showrooms</span></span></h2>
 						<div class="row col-mb-50">
-							<a href="https://www.google.com/maps/place/San+Francisco" target="_blank" class="col-sm-6">
-								<h3 class="h5 mb-2 fw-medium">San Fransisco</h3>
-								<p class="m-0 text-white-50">795 Folsom Ave, Suite 600<br>
-								San Francisco, CA 94107</p>
+							<a href="#" target="_blank" class="col-sm-12">
+								<h3 class="h5 mb-2 fw-medium">Salik Chowk Park</h3>
+								<p class="m-0 text-white-50">Syuchatar-02, Kalanki-14<br>
+								Kathmandu</p>
 							</a>
 
-							<a href="https://www.google.com/maps/place/melbourne" target="_blank" class="col-sm-6">
-								<h3 class="h5 mb-2 fw-medium">Australia</h3>
-								<p class="m-0 text-white-50">62 Parkes Road,<br>
-								Melbourne, Victoria 3004</p>
-							</a>
-
-							<a href="https://www.google.com/maps/place/london" target="_blank" class="col-sm-6">
-								<h3 class="h5 mb-2 fw-medium">London</h3>
-								<p class="m-0 text-white-50">115  Guild Street, Suite 893<br>
-								London, EC3A3RN</p>
-							</a>
-
-							<a href="https://www.google.com/maps/place/new+york" target="_blank" class="col-sm-6">
-								<h3 class="h5 mb-2 fw-medium">New York</h3>
-								<p class="m-0 text-white-50">996  Geraldine Lane, New York<br>
-								NY, 10004</p>
-							</a>
-
-							<a href="https://www.google.com/maps/place/california" target="_blank" class="col-sm-6">
-								<h3 class="h5 mb-2 fw-medium">California</h3>
-								<p class="m-0 text-white-50">3122  Doctors Drive, Los Angeles<br>
-								California, 90017</p>
-							</a>
-
-							<a href="https://www.google.com/maps/place/Ottawa,+ON,+Canada/" target="_blank" class="col-sm-6">
-								<h3 class="h5 mb-2 fw-medium">Canada</h3>
-								<p class="m-0 text-white-50">305 Garrett Drive, Ottawa<br>
-								Canada, 21907</p>
+							<a href="#" target="_blank" class="col-sm-12">
+								<h3 class="h5 mb-2 fw-medium">Thapagaun [Opening up Soon]</h3>
+								<p class="m-0 text-white-50">New Baneshwor<br>
+								Kathmandu</p>
 							</a>
 						</div>
 					</div>
@@ -78,23 +54,17 @@
 						<div class="row col-mb-50">
 							<div class="col-12 col-lg-6">
 								<h3 class="h5 mb-2 fw-medium">Email:</h3>
-								<a href="mailto:noreply@canvas.com" class="m-0 op-07"><u>noreply@canvas.com</u></a>
-							</div>
-
-							<div class="col-12 col-lg-6">
-								<h3 class="h5 mb-2 fw-medium">Press:</h3>
-								<a href="mailto:press@canvas.com" class="m-0 op-07">
-								<u>noreply.press@canvas.com</u></a>
+								<a href="mailto:gagu.nepal@gmail.com" class="m-0 op-07"><u>luna.ai@furniture.com</u></a>
 							</div>
 
 							<div class="col-12 col-lg-6">
 								<h3 class="h5 mb-2 fw-medium">Call:</h3>
-								<a href="tel:+117370666002" class="m-0 op-07"><u>+00(111)-223344</u></a>
+								<a href="tel:+9779808949116" class="m-0 op-07"><u>9808949116</u></a>
 							</div>
 
 							<div class="col-12 col-lg-6">
 								<h3 class="h5 mb-2 fw-medium">WhatsApp:</h3>
-								<a href="https://wa.me/+00111223344" class="m-0 op-07"><u>00 111 223344</u></a>
+								<a href="https://wa.me/+9779808949116" class="m-0 op-07"><u>9808949116</u></a>
 							</div>
 
 							<div class="col-12 col-lg-12">

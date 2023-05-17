@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Auth;
 use Stripe;
 use Session;
+use Exception;
+use Spatie\Newsletter\Facades\Newsletter;
 
 class PageController extends Controller
 {
@@ -307,6 +309,16 @@ class PageController extends Controller
         }
         else{
             return redirect('login');
+        }
+    }
+
+    //subscription for newsletter
+    public function subscribe(Request $request){
+        if(Newsletter::isSubscribed($request->subscribe_email)){
+            return redirect()->back()->with('message','Email Already Subscribed!');
+        }else{
+            Newsletter::subscribe($request->subscribe_email);
+            return redirect()->back()->with('message','Email subscribed successfully');
         }
     }
     

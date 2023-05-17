@@ -12,7 +12,7 @@ class App{
         this.loadingBar = new LoadingBar();
         this.loadingBar.visible = false;
 
-		this.assetsPath = 'assets/ar-shop/';
+		this.assetsPath = 'product/';
         
 		this.camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 20 );
 		this.camera.position.set( 0, 1.6, 0 );
@@ -106,7 +106,7 @@ class App{
         } );
     }
     
-	showChair(id){
+	showChair(name){
         this.initAR();
         
 		const loader = new GLTFLoader( ).setPath(this.assetsPath);
@@ -117,7 +117,8 @@ class App{
 		// Load a glTF resource
 		loader.load(
 			// resource URL
-			`chair${id}.glb`,
+			// `chair${id}.glb`,
+            `${name}.glb`,
 			// called when the resource is loaded
 			function ( gltf ) {
 

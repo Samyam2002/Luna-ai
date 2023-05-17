@@ -50,7 +50,7 @@
 										<button type="submit" name="quantity" value="1" class="add-to-cart button button-medium fw-medium color button-light px-lg-4 add-to-cart m-0" style="border-radius:10px;"><i class="fa-sharp fa-solid fa-cart-shopping"></i></button>	
 										@endif
 									</form>
-									<button class="ar-button" style="margin: 4px 10px;" onclick="window.app.showChair(1);"><i class="fas fa-camera"></i></button>						
+									<button class="ar-button" style="margin: 4px 10px;" onclick="window.app.showChair(<?php echo ($products->name); ?>)"><i class="fas fa-camera"></i></button>						
 								</div>
 								</div>
 
