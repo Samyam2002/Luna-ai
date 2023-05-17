@@ -43,7 +43,7 @@
 								</div>
 								<div class="fbox-content">
 									<h2 class="nott fw-medium h4 mb-4">Original & Excellent Quality</h2>
-									<p class="op-06">Completely formulate top-line resources rather than cross-media portals cross-platform solutions.</p>
+									<p class="op-06">Discover the essence of originality and excellence with Luna-ai's impeccably crafted furniture.</p>
 								</div>
 							</div>
 						</div>
@@ -55,8 +55,8 @@
 									<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#0d5293" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M176,144H16v40a8,8,0,0,0,8,8H44a24,24,0,0,1,48,0h72a23.99048,23.99048,0,0,1,11.99813-20.78815Z" opacity="0.2"></path><path d="M212,192a24.00631,24.00631,0,0,0-36.00187-20.78815L176,120h64v64a8,8,0,0,1-8,8H212" opacity="0.2"></path><path d="M240,120H176V80h42.58374a8,8,0,0,1,7.42781,5.02887Z" fill="none" stroke="#0d5293" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></path><line x1="16" y1="144" x2="176" y2="144" fill="none" stroke="#0d5293" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></line><circle cx="188" cy="192" r="24" fill="none" stroke="#0d5293" stroke-miterlimit="10" stroke-width="8"></circle><circle cx="68" cy="192" r="24" fill="none" stroke="#0d5293" stroke-miterlimit="10" stroke-width="8"></circle><line x1="164" y1="192" x2="92" y2="192" fill="none" stroke="#0d5293" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></line><path d="M44,192H24a8,8,0,0,1-8-8V72a8,8,0,0,1,8-8H176V171.21508" fill="none" stroke="#0d5293" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></path><path d="M176,171.21508V120h64v64a8,8,0,0,1-8,8H212" fill="none" stroke="#0d5293" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"></path></svg>
 								</div>
 								<div class="fbox-content">
-									<h2 class="nott fw-medium h4 mb-4">Free & Fast Shipping</h2>
-									<p class="op-06">Rapidiously optimize user-centric catalysts for change vis-a-vis granular "outside the box" thinking.</p>
+									<h2 class="nott fw-medium h4 mb-4">Fast Shipping at Low Price</h2>
+									<p class="op-06">Experience the convenience of free and fast shipping with Luna-ai, ensuring your furniture arrives promptly and hassle-free.</p>
 								</div>
 							</div>
 						</div>
@@ -69,7 +69,7 @@
 								</div>
 								<div class="fbox-content">
 									<h2 class="nott fw-medium h4 mb-4">Secure Payment</h2>
-									<p class="op-06">Continually recaptiualize 2.0 action items after global information. Efficiently strategize holistic networks.</p>
+									<p class="op-06">Luna-ai offers secure payment options through Stripe, ensuring the confidentiality and protection of your personal information.</p>
 								</div>
 							</div>
 						</div>
@@ -96,7 +96,7 @@
 					<!-- Content -->
 					<div class="col-md-6 p-5 p-lg-6">
 						<h3 class="h3 bottommargin fw-medium px-lg-5">1. 100% Trustable & Best Quality</h3>
-						<p class="m-0 px-lg-5">Compellingly cultivate synergistic infrastructures rather than fully tested opportunities. Synergistically evisculate web-enabled interfaces for market positioning web services. Continually create business infomediaries and interdependent products.</p>
+						<p class="m-0 px-lg-5">Luna-ai stands as a testament to trust, providing you with a 100% reliable shopping experience backed by our commitment to quality. Discover the pinnacle of craftsmanship and indulge in furniture that surpasses your expectations. Experience the assurance of excellence and transform your space with Luna-ai's best-in-class furniture.</p>
 					</div>
 				</div>
 
@@ -105,13 +105,13 @@
 				<!-- 2 -->
 				<div class="row flex-md-row-reverse align-items-md-center">
 					<!-- Image -->
-					<div class="col-md-6 px-lg-0 min-vh-50 min-vh-lg-75 d-flex align-self-stretch" style="background: url('demos/furniture/images/about/2.jpg') no-repeat center center; background-size: cover;">
+					<div class="col-md-6 px-lg-0 min-vh-50 min-vh-lg-75 d-flex align-self-stretch" style="background: url('assets/ar.jpg') no-repeat center center; background-size: cover;">
 					</div>
 
 					<!-- Content -->
 					<div class="col-md-6 p-5 p-lg-6">
-						<h3 class="h3 bottommargin fw-medium px-lg-5">2. No Extra Charges for Shipping</h3>
-						<p class="m-0 px-lg-5">Continually aggregate scalable metrics for vertical paradigms. Rapidiously pontificate low-risk high-yield web-readiness via ethical e-business. Phosfluorescently actualize 24/365 architectures rather than multimedia based leadership skills. Collaboratively embrace go.</p>
+						<h3 class="h3 bottommargin fw-medium px-lg-5">2. Immersive AR view</h3>
+						<p class="m-0 px-lg-5">Step into a new dimension of furniture shopping with Luna-ai's AR view, immersing yourself in a captivating and lifelike experience. Visualize how our exquisite pieces seamlessly blend into your space, making informed decisions with confidence. Explore the future of furniture shopping and unlock a world of endless possibilities with our AR lens view.</p>
 					</div>
 				</div>
 
@@ -126,7 +126,7 @@
 					<!-- Content -->
 					<div class="col-md-6 p-5 p-lg-6">
 						<h3 class="h3 bottommargin fw-medium px-lg-5">3. Secure Payment Options</h3>
-						<p class="m-0 px-lg-5">Continually aggregate scalable metrics for vertical paradigms. Rapidiously pontificate low-risk high-yield web-readiness via ethical e-business. Phosfluorescently actualize 24/365 architectures rather than multimedia based leadership skills. Collaboratively embrace go.</p>
+						<p class="m-0 px-lg-5">At Luna-ai, we prioritize your peace of mind by offering a range of secure payment options, including encrypted transactions and trusted payment gateways. Shop with confidence, knowing that your sensitive information is protected throughout the checkout process. Enjoy a seamless and worry-free payment experience while bringing home the finest furniture from Luna-ai.</p>
 					</div>
 				</div>
 
@@ -140,8 +140,8 @@
 
 					<!-- Content -->
 					<div class="col-md-6 p-5 p-lg-6">
-						<h3 class="h3 bottommargin fw-medium px-lg-5">4. 30 Days Return Policy</h3>
-						<p class="m-0 px-lg-5">Continually aggregate scalable metrics for vertical paradigms. Rapidiously pontificate low-risk high-yield web-readiness via ethical e-business. Phosfluorescently actualize 24/365 architectures rather than multimedia based leadership skills. Collaboratively embrace go.</p>
+						<h3 class="h3 bottommargin fw-medium px-lg-5">4. Cancellation of Order</h3>
+						<p class="m-0 px-lg-5">We understand that plans may change, and we offer a hassle-free cancellation policy at Luna-ai. If you change your mind, you can cancel your order within 12 hrs of placing the order. However, it's only applicable for orders placed on COD. We are working to integrate refund process for Stripe payment and soon will notify about it.</p>
 					</div>
 				</div>
 

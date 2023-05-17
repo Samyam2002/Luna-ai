@@ -64,7 +64,7 @@
 		<div id="top-bar" class="text-center bg-color-light">
 			<div class="container clearfix">
 				<div class="d-md-flex justify-content-md-between align-items-md-center">
-					<h4 class="mb-2 mb-md-0 h6 fw-normal" id="hide">Free Shipping on every order</h4>
+					<h4 class="mb-2 mb-md-0 h6 fw-normal" id="hide">Only $100 Shipping on every order</h4>
 
 					@if (Route::has('login'))
 					@auth
@@ -282,9 +282,8 @@
 								<h4 class="ls0 nott">Social</h4>
 
 								<ul class="list-unstyled iconlist ms-0">
-									<li><a href="https://facebook.com/semicolonweb" target="_blank"><i class="icon-facebook"></i> Facebook</a></li>
-									<li><a href="https://instagram.com/semicolonweb" target="_blank"><i class="icon-instagram"></i> Instagram</a></li>
-									<li><a href="https://twitter.com/__semicolon" target="_blank"><i class="icon-twitter"></i> Twitter</a></li>
+									<li><a href="https://www.facebook.com/profile.php?id=100092160399656" target="_blank"><i class="icon-facebook"></i> Facebook</a></li>
+									<li><a href="https://www.instagram.com/luna_ai._/" target="_blank"><i class="icon-instagram"></i> Instagram</a></li>
 								</ul>
 
 							</div>
@@ -294,12 +293,11 @@
 						<div class="col-lg-2 col-md-4 col-6">
 							<div class="widget widget_links widget-li-noicon">
 
-								<h4 class="ls0 nott">Support</h4>
+								<h4 class="ls0 nott">Pages</h4>
 
 								<ul class="list-unstyled iconlist ms-0">
 									<li><a href="/index">Home</a></li>
-									<li><a href="/about">Shop</a></li>
-									<li><a href="/contact">Contact</a></li>
+									<li><a href="/shop">Shop</a></li>
 								</ul>
 
 							</div>
@@ -312,9 +310,8 @@
 								<h4 class="ls0 nott">Get to Know us</h4>
 
 								<ul class="list-unstyled iconlist ms-0">
-									<li><a href="intro.html#section-niche">Niche Demos</a></li>
-									<li><a href="intro.html#section-multipage">Home Pages</a></li>
-									<li><a href="intro.html#section-onepage">One Pages</a></li>
+									<li><a href="{{url('about')}}">About</a></li>
+									<li><a href="{{url('contact')}}">Contact</a></li>
 								</ul>
 
 							</div>
@@ -325,15 +322,14 @@
 							<div class="widget">
 														
 								<!--Alert message if email is subscribed successfully-->
-								@if(session()->has('message'))
+								@if(session()->has('submessage'))
 								<div id="hide-box" class="alert alert-success">
 								<button type="button" class="btn-close btn-sm" data-bs-dismiss="alert" aria-hidden="true"></button>
-								{{session()->get('message')}}
+								{{session()->get('submessage')}}
 								</div>
 								@endif
-								
-								<h4>Subscribe Us</h4>
-								<h5 class="font-body"><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</h5>
+
+								<h5 class="font-body"><strong>Subscribe</strong> to Our Newsletter to get Amazing Deals.</h5>
 								<form action="{{route('subscribe')}}" method="post" class="mb-0" enctype="multipart/form-data">
 									@csrf
 									<div class="input-group">

@@ -285,11 +285,17 @@ class PageController extends Controller
     public function cancelOrder($id){
         $order = Order::find($id);
 
+        if ($order->payment_status == 'Paid'){
+            return redirect()->back()->with('message', 'Your order cant be cancelled!');
+        }
+
         // $order->delivery_status = "Order cancelled";
         // $order->save();
-        $order->delete();
+        else{
+            $order->delete();
 
-        return redirect()->back()->with('message', 'Your order is cancelled');
+            return redirect()->back()->with('message', 'Your order is cancelled');
+        }
     }
 
 
@@ -315,10 +321,10 @@ class PageController extends Controller
     //subscription for newsletter
     public function subscribe(Request $request){
         if(Newsletter::isSubscribed($request->subscribe_email)){
-            return redirect()->back()->with('message','Email Already Subscribed!');
+            return redirect()->back()->with('submessage','Email Already Subscribed!');
         }else{
             Newsletter::subscribe($request->subscribe_email);
-            return redirect()->back()->with('message','Email subscribed successfully');
+            return redirect()->back()->with('submessage','Email subscribed successfully');
         }
     }
     

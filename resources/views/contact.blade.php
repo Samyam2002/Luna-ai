@@ -69,21 +69,13 @@
 
 							<div class="col-12 col-lg-12">
 								<h3 class="h5 mb-3 fw-medium">Follow Us</h3>
-								<a href="https://facebook.com/semicolonweb" target="_blank" class="social-icon si-small si-rounded si-colored si-facebook">
+								<a href="https://www.facebook.com/profile.php?id=100092160399656" target="_blank" class="social-icon si-small si-rounded si-colored si-facebook">
 									<i class="icon-facebook"></i>
 									<i class="icon-facebook"></i>
 								</a>
-								<a href="https://instagram.com/semicolonweb" target="_blank" class="social-icon si-small si-rounded si-colored si-instagram">
+								<a href="https://www.instagram.com/luna_ai._/" target="_blank" class="social-icon si-small si-rounded si-colored si-instagram">
 									<i class="icon-instagram"></i>
 									<i class="icon-instagram"></i>
-								</a>
-								<a href="https://twitter.com/__semicolon" target="_blank" class="social-icon si-small si-rounded si-colored si-twitter">
-									<i class="icon-twitter"></i>
-									<i class="icon-twitter"></i>
-								</a>
-								<a href="https://youtube.com/c/SemiColonweb/videos" target="_blank" class="social-icon si-small si-rounded si-colored si-youtube">
-									<i class="icon-youtube"></i>
-									<i class="icon-youtube"></i>
 								</a>
 							</div>
 						</div>
@@ -104,7 +96,7 @@
 
 						<h3 class="mt-3 mb-5 fw-normal h2">Don't Follow the Crowd, Follow us on <span data-animate="svg-underline-animated" class="svg-underline nocolor"><span>Instagram</span></span></h3>
 
-						<a href="https://instagram.com/semicolonweb" target="_blank" class="button button-large button-border nott ls0 fw-normal button-light button-white border-width-1 m-0" style="border-color: rgba(255,255,255,0.25)">@luna_ai</a>
+						<a href="https://www.instagram.com/luna_ai._/" target="_blank" class="button button-large button-border nott ls0 fw-normal button-light button-white border-width-1 m-0" style="border-color: rgba(255,255,255,0.25)">@luna_ai</a>
 					</div>
 				</div>
 
@@ -112,16 +104,16 @@
 				<div class="col-lg-4 col-md-6 order-lg-1">
 					<div class="row gutter-4">
 						<div class="col-6">
-							<a class="d-block instagram-image" href="https://instagram.com/semicolonweb" target="_blank" style="background: url('demos/furniture/images/instagram/1.jpg') no-repeat center center; background-size:cover; min-height: 33vh;"></a>
+							<a class="d-block instagram-image" href="https://www.instagram.com/luna_ai._/" target="_blank" style="background: url('demos/furniture/images/instagram/1.jpg') no-repeat center center; background-size:cover; min-height: 33vh;"></a>
 						</div>
 						<div class="col-6">
-							<a class="d-block instagram-image" href="https://instagram.com/semicolonweb" target="_blank" style="background: url('demos/furniture/images/instagram/2.jpg') no-repeat center center; background-size:cover; min-height: 33vh;"></a>
+							<a class="d-block instagram-image" href="https://www.instagram.com/luna_ai._/" target="_blank" style="background: url('demos/furniture/images/instagram/2.jpg') no-repeat center center; background-size:cover; min-height: 33vh;"></a>
 						</div>
 						<div class="col-6">
-							<a class="d-block instagram-image" href="https://instagram.com/semicolonweb" target="_blank" style="background: url('demos/furniture/images/instagram/3.jpg') no-repeat center center; background-size:cover; min-height: 33vh;"></a>
+							<a class="d-block instagram-image" href="https://www.instagram.com/luna_ai._/" target="_blank" style="background: url('demos/furniture/images/instagram/3.jpg') no-repeat center center; background-size:cover; min-height: 33vh;"></a>
 						</div>
 						<div class="col-6">
-							<a class="d-block instagram-image" href="https://instagram.com/semicolonweb" target="_blank" style="background: url('demos/furniture/images/instagram/4.jpg') no-repeat center center; background-size:cover; min-height: 33vh;"></a>
+							<a class="d-block instagram-image" href="https://www.instagram.com/luna_ai._/" target="_blank" style="background: url('demos/furniture/images/instagram/4.jpg') no-repeat center center; background-size:cover; min-height: 33vh;"></a>
 						</div>
 					</div>
 				</div>
@@ -130,16 +122,16 @@
 				<div class="col-lg-4 col-md-6 order-lg-3 mt-1 mt-md-0 ps-md-1 ps-lg-0">
 					<div class="row gutter-4">
 						<div class="col-6">
-							<a class="d-block instagram-image" href="https://instagram.com/semicolonweb" target="_blank" style="background: url('demos/furniture/images/instagram/5.jpg') no-repeat center center; background-size:cover; min-height: 33vh;"></a>
+							<a class="d-block instagram-image" href="https://www.instagram.com/luna_ai._/" target="_blank" style="background: url('demos/furniture/images/instagram/5.jpg') no-repeat center center; background-size:cover; min-height: 33vh;"></a>
 						</div>
 						<div class="col-6">
-							<a class="d-block instagram-image" href="https://instagram.com/semicolonweb" target="_blank" style="background: url('demos/furniture/images/instagram/6.jpg') no-repeat center center; background-size:cover; min-height: 33vh;"></a>
+							<a class="d-block instagram-image" href="https://www.instagram.com/luna_ai._/" target="_blank" style="background: url('demos/furniture/images/instagram/6.jpg') no-repeat center center; background-size:cover; min-height: 33vh;"></a>
 						</div>
 						<div class="col-6">
-							<a class="d-block instagram-image" href="https://instagram.com/semicolonweb" target="_blank" style="background: url('demos/furniture/images/instagram/7.jpg') no-repeat center center; background-size:cover; min-height: 33vh;"></a>
+							<a class="d-block instagram-image" href="https://www.instagram.com/luna_ai._/" target="_blank" style="background: url('demos/furniture/images/instagram/7.jpg') no-repeat center center; background-size:cover; min-height: 33vh;"></a>
 						</div>
 						<div class="col-6">
-							<a class="d-block instagram-image" href="https://instagram.com/semicolonweb" target="_blank" style="background: url('demos/furniture/images/instagram/8.jpg') no-repeat center center; background-size:cover; min-height: 33vh;"></a>
+							<a class="d-block instagram-image" href="https://www.instagram.com/luna_ai._/" target="_blank" style="background: url('demos/furniture/images/instagram/8.jpg') no-repeat center center; background-size:cover; min-height: 33vh;"></a>
 						</div>
 					</div>
 				</div>
