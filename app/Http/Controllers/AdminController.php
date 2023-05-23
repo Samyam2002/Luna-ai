@@ -212,7 +212,7 @@ class AdminController extends Controller
     }
 
     //search in Admin
-    public function search(Request $request){
+    public function searchAP(Request $request){
         $search=$request->search;
 
         $order = Order::where('name', 'LIKE', "%$search%")->orWhere('phone', 'LIKE', "%$search%")->orWhere('email', 'LIKE', "%$search%")->orWhere('product_title', 'LIKE', "%$search%")->orWhere('payment_status', 'LIKE', "%$search%")->orWhere('delivery_status', 'LIKE', "%$search%")->get();
