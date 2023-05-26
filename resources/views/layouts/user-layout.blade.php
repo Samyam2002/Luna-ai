@@ -101,8 +101,8 @@
 						<!-- Logo
 						============================================= -->
 						<div id="logo" class="mx-auto col-auto flex-column order-2">
-							<a href="{{url('/index')}}" class="standard-logo"><img src="assets/logo.png" alt="Canvas Logo" style="padding:10px"></a>
-							<a href="{{url('/index')}}" class="retina-logo"><img src="assets/logo.png" alt="Canvas Logo" style="padding:10px"></a>
+							<a href="{{url('/')}}" class="standard-logo"><img src="assets/logo.png" alt="Canvas Logo" style="padding:10px"></a>
+							<a href="{{url('/')}}" class="retina-logo"><img src="assets/logo.png" alt="Canvas Logo" style="padding:10px"></a>
 						</div><!-- #logo end -->
 
 						<div class="header-misc col-auto col-lg-3 order-3 justify-content-lg-end ms-0 ms-sm-3 px-0">
@@ -297,7 +297,7 @@
 								<h4 class="ls0 nott">Pages</h4>
 
 								<ul class="list-unstyled iconlist ms-0">
-									<li><a href="/index">Home</a></li>
+									<li><a href="/">Home</a></li>
 									<li><a href="/shop">Shop</a></li>
 								</ul>
 
@@ -351,7 +351,7 @@
 				<div class="container">
 
 					<div class="d-flex justify-content-center">
-						<span>&copy; 2020 All Rights Reserved by Canvas Inc.</span>
+						<span>&copy; 2023 All Rights Reserved by Luna-ai Corp.</span>
 					</div>
 
 				</div>
